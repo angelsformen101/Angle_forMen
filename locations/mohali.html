@@ -53,13 +53,7 @@
     <link rel="apple-touch-icon" href="../public/favicon.png">
 
     <style>
-        /* Responsive Reset */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
+        /* Base Styles & Dark Theme */
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
@@ -75,7 +69,6 @@
 
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -91,7 +84,7 @@
             text-decoration: underline;
         }
 
-        /* Modal */
+        /* --- 18+ Modal Styles --- */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -111,8 +104,6 @@
             color: #333333;
             width: 90%;
             max-width: 450px;
-            max-height: 90vh;
-            overflow-y: auto;
             padding: 40px 30px;
             border-radius: 12px;
             text-align: center;
@@ -227,7 +218,7 @@
             text-decoration: underline;
         }
 
-                /* Header & Navigation */
+        /* Header & Navigation */
         header {
             background-color: #000;
             padding: 12px 30px;
@@ -286,6 +277,7 @@
             text-transform: uppercase;
             font-size: 14px;
         }
+
         /* Mobile Hamburger Menu Toggle */
         .menu-toggle {
             display: none;
@@ -319,19 +311,18 @@
         .menu-toggle.active .bar:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
-/* Hero Video */
+
+        /* --- Hero Section with Video Background --- */
         .video-hero {
             position: relative;
             width: 100%;
             height: 55vh;
             min-height: 440px;
-            max-height: 660px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
             border-bottom: 1px solid var(--border-color);
-            background-color: #111;
         }
 
         .video-bg {
@@ -357,7 +348,7 @@
         }
 
         .hero-content h1 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-size: 3.2rem;
             color: #fff;
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -365,13 +356,19 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
-        .hero-content p {
-            font-size: clamp(1rem, 3vw, 1.3rem);
+        .hero-content p,
+        .hero-content h2 {
+            font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+            font-weight: 400;
             color: #ddd;
             margin: 0 auto;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            border-bottom: none;
+            padding-bottom: 0;
+            line-height: 1.6;
         }
 
+        /* Breadcrumbs */
         .breadcrumbs {
             max-width: 1300px;
             margin: 20px auto 0 auto;
@@ -388,13 +385,13 @@
             color: var(--primary-color);
         }
 
-        /* Filters */
+        /* Category Filter Bar */
         .category-filters {
             max-width: 1300px;
             margin: 30px auto;
             padding: 0 20px;
             display: flex;
-            gap: 10px;
+            gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -403,12 +400,11 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             color: #fff;
-            padding: 8px 20px;
+            padding: 10px 25px;
             border-radius: 25px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
-            font-size: 0.9rem;
         }
 
         .filter-btn.active,
@@ -417,7 +413,7 @@
             border-color: var(--primary-color);
         }
 
-        /* Layout */
+        /* Main Layout: Grid + Sidebar */
         .container {
             max-width: 1300px;
             margin: 0 auto 40px auto;
@@ -428,17 +424,19 @@
         }
 
         .section-title {
+            grid-column: 1 / -1;
             font-size: 2rem;
             color: #fff;
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
-            margin: 0 0 20px 0;
+            margin-bottom: 20px;
+            margin-top: 0;
         }
 
-        /* Profile Cards (CSS Grid implementation for responsive desktop/tablet) */
+        /* Profile Grid & Cards */
         .profile-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
 
@@ -461,11 +459,11 @@
             position: relative;
             display: flex;
             flex-direction: row;
-            height: 220px;
+            min-height: 220px;
             padding: 15px;
             animation: fadeIn 0.4s ease forwards;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+            box-sizing: border-box;
         }
 
         .card:hover {
@@ -476,28 +474,28 @@
         .vip-badge {
             position: absolute;
             top: -1px;
-            right: 15px;
+            right: 20px;
             background-color: #fff;
             color: var(--card-border);
             font-weight: 900;
             font-style: italic;
-            padding: 3px 10px;
-            font-size: 0.75rem;
+            padding: 3px 12px;
+            font-size: 0.8rem;
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
             border: 1px solid var(--card-border);
             border-top: none;
+            letter-spacing: 0.5px;
             z-index: 10;
         }
 
         .card-img-wrapper {
             position: relative;
-            width: 150px;
+            width: 180px;
             flex-shrink: 0;
             border-radius: 8px;
             overflow: hidden;
             background-color: #2a2a2a;
-            height: 100%;
         }
 
         .card-img-wrapper img {
@@ -513,7 +511,7 @@
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
             font-size: 0.75rem;
-            padding: 2px 6px;
+            padding: 3px 8px;
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -521,20 +519,20 @@
         }
 
         .card-content {
-            padding-left: 15px;
+            padding-left: 20px;
             display: flex;
             flex-direction: column;
-            width: calc(100% - 150px);
+            flex-grow: 1;
+            width: calc(100% - 180px);
         }
 
-        /* Strict Line Clamping */
         .card-title {
             color: var(--card-border);
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             line-height: 1.4;
-            padding-right: 70px;
+            padding-right: 90px;
             display: -webkit-box;
             -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
@@ -543,10 +541,10 @@
         }
 
         .card-desc {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #ccc;
-            margin-bottom: 10px;
-            line-height: 1.4;
+            margin-bottom: 15px;
+            line-height: 1.5;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -554,28 +552,28 @@
         }
 
         .card-meta {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #aaa;
-            line-height: 1.6;
-            margin-bottom: 10px;
+            line-height: 1.8;
+            margin-bottom: 15px;
         }
 
         .card-meta div {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .card-actions-round {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             margin-top: auto;
             align-self: flex-end;
         }
 
         .btn-round {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -590,8 +588,8 @@
         }
 
         .btn-round svg {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
         }
 
         .icon-call svg {
@@ -663,7 +661,7 @@
             font-style: italic;
         }
 
-        /* SEO Content */
+        /* Local SEO Content */
         .local-seo-content {
             max-width: 1300px;
             margin: 20px auto 40px auto;
@@ -671,6 +669,7 @@
             background-color: var(--card-bg);
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            box-sizing: border-box;
         }
 
         .local-seo-content h2 {
@@ -710,14 +709,13 @@
             padding-left: 20px;
             color: #ddd;
             line-height: 1.7;
-            margin-bottom: 15px;
         }
 
         .local-seo-content li {
             margin-bottom: 10px;
         }
 
-        /* Locations */
+        /* More Locations Grid */
         .locations-wrapper {
             max-width: 1300px;
             margin: 0 auto 60px auto;
@@ -744,7 +742,7 @@
             text-align: center;
             border-radius: 4px;
             border: 1px solid var(--border-color);
-            transition: 0.3s;
+            transition: all 0.3s ease;
             font-weight: bold;
             color: var(--text-muted);
         }
@@ -755,7 +753,31 @@
             color: #fff;
         }
 
-        /* Footer */
+                /* FAQ Section */
+        .faq-section {
+            margin-top: 40px;
+            border-top: 2px solid var(--border-color);
+            padding-top: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+/* Revamped Footer */
         footer {
             background-color: #050505;
             padding: 50px 20px 20px 20px;
@@ -769,6 +791,7 @@
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1.5fr;
             gap: 40px;
+            text-align: left;
         }
 
         .footer-col h4 {
@@ -814,14 +837,52 @@
             font-size: 0.9rem;
         }
 
-        /* Mobile Adjustments */
-        @media(max-width: 1100px) {
+        /* Responsive Layout */
+        @media(max-width: 1024px) {
             .container {
                 grid-template-columns: 1fr;
             }
 
-            .profile-grid {
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 650px) {
+            .card {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .card-img-wrapper {
+                width: 100%;
+                height: 280px;
+                margin-bottom: 15px;
+            }
+
+            .card-content {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .card-title {
+                padding-right: 0;
+                margin-top: 15px;
+                -webkit-line-clamp: 2;
+            }
+
+            .vip-badge {
+                right: 15px;
+            }
+
+            .card-actions-round {
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -885,56 +946,12 @@
                 text-decoration: none;
             }
 
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
             .local-seo-content {
                 padding: 25px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-        }
-
-        @media(max-width: 500px) {
-            .profile-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .card {
-                flex-direction: column;
-                height: auto;
-                padding: 12px;
-            }
-
-            .card-img-wrapper {
-                width: 100%;
-                height: 280px;
-                margin-bottom: 12px;
-            }
-
-            .card-content {
-                width: 100%;
-                padding: 0;
-            }
-
-            .card-title {
-                padding-right: 0;
-                margin-top: 5px;
-                -webkit-line-clamp: 2;
-            }
-
-            .vip-badge {
-                right: 12px;
-            }
-
-            .card-actions-round {
-                width: 100%;
-                justify-content: flex-end;
-                margin-top: 15px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -966,7 +983,7 @@
         </div>
     </div>
 
-        <header>
+    <header>
         <a href="/index.html" class="logo">
             <img src="../logo.png" alt="AngelsForMen" class="logo-img">
             Angels<span>For</span>Men
@@ -995,8 +1012,8 @@
         <div class="hero-content">
             <!-- Highly optimized H1 tag for primary KD 80+ keywords for Mohali -->
             <h1>Mohali Call Girls, Book Premium Aerocity Escort Service</h1>
-            <p>Experience the finest VIP companions in Punjab's premium IT hub. Find verified, genuine, and independent
-                escorts near Phase 3B2, Sector 71, and Aerocity.</p>
+                        
+            <h2>Connect with an attractive Mohali call girl and enjoy a professional Mohali escort service tailored to elite standards. Find 100% verified, genuine independent companions and corporate VIP escorts near Phase 3B2, Sector 70, and Aerocity.</h2>
         </div>
     </section>
 
@@ -1557,7 +1574,8 @@
             AngelsForMen provides the most comprehensive and verified directory. Whether you seek the companionship of a
             <strong>call girl in Mohali</strong> for a corporate event near PCA Stadium, or you simply want to browse
             the <strong>best call girls Mohali</strong> has available for a private evening, our platform connects you
-            with absolute premium quality.</p>
+            with absolute premium quality.
+        </p>
 
         <h3>Finding a Genuine Escort Service Mohali</h3>
         <p>We understand that trust is paramount when searching for <strong>Mohali escorts</strong>. The adult industry
@@ -1585,7 +1603,8 @@
             <strong>premium call girls Mohali</strong> businessmen prefer for high-society events. Conversely, if you
             are a student or traveling on a budget, we offer an excellent <strong>budget escort service Mohali</strong>.
             You will easily find <strong>affordable call girls Mohali</strong> near Kharar who provide incredible
-            companionship without compromising on safety, privacy, or hygiene.</p>
+            companionship without compromising on safety, privacy, or hygiene.
+        </p>
         <p>We also feature specialized categories, such as the highly demanded <strong>Mohali bhabi call girls</strong>,
             perfect for men who appreciate mature curves and deeply passionate, experienced encounters.</p>
 
@@ -1596,6 +1615,63 @@
                 number</strong> provided to initiate a chat, ask for live verification, and discuss your expectations.
             Remember to always treat every <strong>escort in Mohali</strong> with the utmost respect to guarantee an
             unforgettable experience.</p>
+    
+
+        <!-- NEW FAQ SECTION FOR LOCAL SEO -->
+        <div class="faq-section">
+            <h3>Frequently Asked Questions (FAQs) About Mohali Call Girls</h3>
+
+            <div class="faq-item">
+                <h4>1. How can I safely book a verified call girl in Mohali?</h4>
+                <p>Booking a verified call girl in Mohali is safe and quick via AngelsForMen. Browse our verified profiles, select a companion based in Phase 3B2, Phase 7, or Sector 70, and contact her directly via WhatsApp. Always ask for a live photo or quick video check before confirming your room details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>2. Do Mohali escorts provide outcalls to hotels near PCA Stadium and Phase 7?</h4>
+                <p>Yes, companions in Mohali provide swift outcall services across all sectors and phases, including Phase 3B2, Phase 5, Phase 7, Phase 11, Sector 70, and commercial hubs near PCA Cricket Stadium and Bestech Square Mall.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>3. Can I book an escort for IT City Mohali and Aerocity hotels?</h4>
+                <p>Absolutely. With the booming IT corridor around Sector 82 (JLPL IT City) and Aerocity near Chandigarh International Airport, independent escorts readily provide outcall visits to business travelers staying in corporate hotels and service suites.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>4. What types of companions are available in Mohali?</h4>
+                <p>Our Mohali listings feature smart Punjabi college girls (18+), independent housewives, corporate hostesses, and glamorous VIP models, offering rich variety for clients across the Tricity.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>5. What are the average charges for call girls in Mohali?</h4>
+                <p>Hourly rates in Mohali typically range from ₹3,000 to ₹6,000, while overnight bookings range between ₹9,000 and ₹18,000 depending on the model's tier and requested services.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>6. Is advance payment required when booking escorts in Mohali?</h4>
+                <p>Never. We strictly caution all clients: <strong>do not transfer any advance money online</strong>. Authentic independent companions in Mohali collect payment exclusively on arrival in cash or via hand-to-hand UPI.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>7. How quickly can an escort reach my hotel in Mohali?</h4>
+                <p>Due to well-planned roads and central connectivity across SAS Nagar, most independent escorts arrive at your hotel or residence within 30 to 45 minutes of booking confirmation.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>8. Can Mohali escorts travel across Chandigarh and Panchkula?</h4>
+                <p>Yes, our Mohali companions travel freely throughout the Tricity region. You can easily arrange meetings in Chandigarh sectors or Panchkula hotels with seamless coordination.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>9. Are the photographs of Mohali call girls on your site genuine?</h4>
+                <p>Profiles with our "Verified" badge have passed rigorous photo verification checks. For complete satisfaction, you can always request a real-time WhatsApp selfie prior to her departure.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>10. Do Mohali call girls provide sensual erotic massage?</h4>
+                <p>Yes, several independent companions in Mohali offer deeply relaxing body-to-body, tantric, and Swedish oil massages in your private room to melt away mental and physical fatigue.</p>
+            </div>
+
+        </div>
     </section>
 
     <!-- More Locations Section -->
