@@ -84,16 +84,17 @@
             text-decoration: underline;
         }
 
-        /* --- 18+ Modal Styles --- */
+                /* --- 18+ Age Verification Modal Styles --- */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(5px);
-            z-index: 9999;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 999999;
             display: none;
             justify-content: center;
             align-items: center;
@@ -103,12 +104,25 @@
             background-color: #ffffff;
             color: #333333;
             width: 90%;
-            max-width: 450px;
-            padding: 40px 30px;
-            border-radius: 12px;
+            max-width: 440px;
+            padding: 40px 32px 35px 32px;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            font-family: Arial, sans-serif;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+            font-family: inherit;
+            box-sizing: border-box;
+            animation: modalFadeIn 0.25s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .age-icon-wrapper {
@@ -118,105 +132,126 @@
         }
 
         .age-icon-circle {
-            width: 70px;
-            height: 70px;
+            width: 76px;
+            height: 76px;
             border-radius: 50%;
-            border: 2px solid #e0e0e0;
+            border: 1.5px solid #eaeaea;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #fff;
-        }
-
-        .age-icon-circle svg {
-            fill: #2c3e50;
-            width: 35px;
-            height: 35px;
+            background-color: #ffffff;
+            margin: 0 auto;
         }
 
         .age-badge {
             position: absolute;
-            top: -5px;
-            right: -10px;
-            background-color: var(--modal-red);
-            color: white;
+            top: -4px;
+            right: -6px;
+            background-color: #e53935;
+            color: #ffffff;
             border-radius: 50%;
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
-            font-weight: bold;
-            border: 2px solid white;
+            font-size: 10.5px;
+            font-weight: 700;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 6px rgba(229, 57, 53, 0.4);
         }
 
-        .modal-content .modal-title {
-            font-size: 1.4rem;
-            color: #000;
-            margin: 0 0 20px 0;
+        .modal-content .modal-title,
+        .modal-title {
+            font-size: 1.35rem;
+            color: #222222;
+            margin: 0 0 16px 0;
             border: none;
             padding: 0;
-            line-height: 1.3;
-            font-weight: bold;
+            line-height: 1.35;
+            font-weight: 700;
         }
 
-        .modal-content p {
+        .modal-content p,
+        .modal-primary-text {
             font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.5;
+            color: #444444;
+            margin: 0 0 14px 0;
+            line-height: 1.55;
         }
 
         .modal-content strong {
-            color: #000;
+            color: #111111;
+            font-weight: 700;
+        }
+
+        .modal-secondary-text {
+            font-size: 0.9rem;
+            color: #666666;
+            margin: 0 0 26px 0;
+            line-height: 1.5;
         }
 
         .terms-link {
-            color: var(--modal-red);
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
+            color: #e53935;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .terms-link:hover {
+            text-decoration: underline;
+            color: #c62828;
         }
 
         .modal-actions {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .btn-modal-accept {
-            background-color: var(--modal-red);
+            background-color: #e53935;
             color: #ffffff;
             border: none;
-            padding: 12px 30px;
+            padding: 13px 45px;
             font-size: 1rem;
-            font-weight: bold;
-            border-radius: 6px;
+            font-weight: 700;
+            border-radius: 8px;
             cursor: pointer;
-            width: 150px;
-            transition: 0.3s;
+            width: 170px;
+            letter-spacing: 0.5px;
+            transition: background 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 14px rgba(229, 57, 53, 0.35);
         }
 
         .btn-modal-accept:hover {
-            background-color: #c81e1e;
+            background-color: #cf2222;
+            transform: translateY(-1px);
+        }
+
+        .btn-modal-accept:active {
+            transform: translateY(0);
         }
 
         .btn-modal-decline {
             background-color: transparent;
-            color: var(--modal-red);
+            color: #e53935;
             border: none;
             font-size: 0.95rem;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
-            text-transform: uppercase;
+            padding: 6px 16px;
+            transition: opacity 0.2s ease;
         }
 
         .btn-modal-decline:hover {
             text-decoration: underline;
+            opacity: 0.85;
         }
+
 
         /* Header & Navigation */
         header {
@@ -960,29 +995,52 @@
 
 <body>
 
-    <!-- 18+ Age Verification Modal -->
+        <!-- 18+ Age Verification Modal -->
     <div id="age-modal" class="modal-overlay">
         <div class="modal-content">
             <div class="age-icon-wrapper">
                 <div class="age-icon-circle">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <svg viewBox="0 0 48 48" width="42" height="42" style="display:block;margin:auto;">
+                        <!-- Left Person (Black) -->
+                        <circle cx="18" cy="14" r="5" fill="#222222"/>
+                        <path d="M10 36c0-6 4-11 9-11 2.2 0 4.2 1 5.5 2.6-1.5 2.2-2.3 4.9-2.3 7.8v0.6H10z" fill="#222222"/>
+                        <!-- Right Person (Red) -->
+                        <circle cx="30" cy="14" r="5" fill="#e53935"/>
+                        <path d="M38 36c0-6-4-11-9-11-2.2 0-4.2 1-5.5 2.6 1.5 2.2 2.3 4.9 2.3 7.8v0.6H38z" fill="#e53935"/>
                     </svg>
                 </div>
                 <span class="age-badge">18+</span>
             </div>
+
             <div class="modal-title">Please read the following notice before you continue</div>
-            <p><strong>I confirm that I am 18</strong> or above and acknowledge my consent to access mature content,
-                including explicit texts and image.</p>
-            <p>I have reviewed and agree to abide by the<br><a href="/terms.html" class="terms-link">TERMS AND
-                    CONDITIONS</a></p>
+
+            <p class="modal-primary-text"><strong>I confirm that I am 18</strong> or above and acknowledge my consent to access mature content, including explicit texts and image.</p>
+
+            <p class="modal-secondary-text">I have reviewed and agree to abide by the<br>
+                <a href="/terms.html" class="terms-link" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+            </p>
+
             <div class="modal-actions">
-                <button id="btn-accept" class="btn-modal-accept">ACCEPT</button>
-                <button id="btn-decline" class="btn-modal-decline">DECLINE</button>
+                <button id="btn-accept" class="btn-modal-accept" type="button">ACCEPT</button>
+                <button id="btn-decline" class="btn-modal-decline" type="button">Decline</button>
             </div>
         </div>
     </div>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('ageVerified') !== 'true' && sessionStorage.getItem('ageVerified') !== 'true') {
+                    var m = document.getElementById('age-modal');
+                    if (m) {
+                        m.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+
 
     <header>
         <a href="/index.html" class="logo">
@@ -1774,27 +1832,29 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* --- Age Verification Modal Logic (GLOBAL FIRST VISIT) --- */
+                        /* --- Age Verification Modal Event Handlers --- */
             const modal = document.getElementById('age-modal');
             const btnAccept = document.getElementById('btn-accept');
             const btnDecline = document.getElementById('btn-decline');
 
-            if (localStorage.getItem('ageVerified') !== 'true') {
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
+            if (btnAccept && modal) {
+                btnAccept.addEventListener('click', function () {
+                    try {
+                        localStorage.setItem('ageVerified', 'true');
+                        sessionStorage.setItem('ageVerified', 'true');
+                    } catch (e) {}
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
             }
 
-            btnAccept.addEventListener('click', function () {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                localStorage.setItem('ageVerified', 'true');
-            });
+            if (btnDecline) {
+                btnDecline.addEventListener('click', function () {
+                    window.location.href = 'https://www.google.com';
+                });
+            }
 
-            btnDecline.addEventListener('click', function () {
-                window.location.href = 'https://www.google.com';
-            });
-
-            /* --- Category Filtering Logic --- */
+/* --- Category Filtering Logic --- */
             const filterBtns = document.querySelectorAll(".filter-btn");
             const cards = document.querySelectorAll(".profile-grid .card");
 
