@@ -1033,12 +1033,33 @@
     <script>
         (function () {
             try {
-                if (localStorage.getItem('ageVerified') !== 'true' && sessionStorage.getItem('ageVerified') !== 'true') {
-                    var m = document.getElementById('age-modal');
+                localStorage.removeItem('ageVerified');
+                sessionStorage.removeItem('ageVerified');
+                var m = document.getElementById('age-modal');
+                var bAccept = document.getElementById('btn-accept');
+                var bDecline = document.getElementById('btn-decline');
+
+                if (sessionStorage.getItem('afm_age_consent') !== 'true') {
                     if (m) {
                         m.style.display = 'flex';
                         document.body.style.overflow = 'hidden';
                     }
+                }
+
+                if (bAccept && m) {
+                    bAccept.onclick = function () {
+                        try {
+                            sessionStorage.setItem('afm_age_consent', 'true');
+                        } catch (e) { }
+                        m.style.display = 'none';
+                        document.body.style.overflow = '';
+                    };
+                }
+
+                if (bDecline) {
+                    bDecline.onclick = function () {
+                        window.location.href = 'https://www.google.com';
+                    };
                 }
             } catch (e) { }
         })();
@@ -1846,8 +1867,7 @@
             if (btnAccept && modal) {
                 btnAccept.addEventListener('click', function () {
                     try {
-                        localStorage.setItem('ageVerified', 'true');
-                        sessionStorage.setItem('ageVerified', 'true');
+                        sessionStorage.setItem('afm_age_consent', 'true');
                     } catch (e) { }
                     modal.style.display = 'none';
                     document.body.style.overflow = '';

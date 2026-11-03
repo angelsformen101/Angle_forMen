@@ -981,24 +981,70 @@
         <div class="modal-content">
             <div class="age-icon-wrapper">
                 <div class="age-icon-circle">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <svg viewBox="0 0 48 48" width="42" height="42" style="display:block;margin:auto;">
+                        <!-- Left Person (Black) -->
+                        <circle cx="18" cy="14" r="5" fill="#222222" />
+                        <path d="M10 36c0-6 4-11 9-11 2.2 0 4.2 1 5.5 2.6-1.5 2.2-2.3 4.9-2.3 7.8v0.6H10z"
+                            fill="#222222" />
+                        <!-- Right Person (Red) -->
+                        <circle cx="30" cy="14" r="5" fill="#e53935" />
+                        <path d="M38 36c0-6-4-11-9-11-2.2 0-4.2 1-5.5 2.6 1.5 2.2 2.3 4.9 2.3 7.8v0.6H38z"
+                            fill="#e53935" />
                     </svg>
                 </div>
                 <span class="age-badge">18+</span>
             </div>
+
             <div class="modal-title">Please read the following notice before you continue</div>
-            <p><strong>I confirm that I am 18</strong> or above and acknowledge my consent to access mature content,
-                including explicit texts and image.</p>
-            <p>I have reviewed and agree to abide by the<br><a href="/terms.html" class="terms-link">TERMS AND
-                    CONDITIONS</a></p>
+
+            <p class="modal-primary-text"><strong>I confirm that I am 18</strong> or above and acknowledge my consent to
+                access mature content, including explicit texts and image.</p>
+
+            <p class="modal-secondary-text">I have reviewed and agree to abide by the<br>
+                <a href="/terms.html" class="terms-link" target="_blank" rel="noopener noreferrer">Terms and
+                    Conditions</a>
+            </p>
+
             <div class="modal-actions">
-                <button id="btn-accept" class="btn-modal-accept">ACCEPT</button>
-                <button id="btn-decline" class="btn-modal-decline">DECLINE</button>
+                <button id="btn-accept" class="btn-modal-accept" type="button">ACCEPT</button>
+                <button id="btn-decline" class="btn-modal-decline" type="button">Decline</button>
             </div>
         </div>
     </div>
+    <script>
+        (function () {
+            try {
+                localStorage.removeItem('ageVerified');
+                sessionStorage.removeItem('ageVerified');
+                var m = document.getElementById('age-modal');
+                var bAccept = document.getElementById('btn-accept');
+                var bDecline = document.getElementById('btn-decline');
+
+                if (sessionStorage.getItem('afm_age_consent') !== 'true') {
+                    if (m) {
+                        m.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+
+                if (bAccept && m) {
+                    bAccept.onclick = function () {
+                        try {
+                            sessionStorage.setItem('afm_age_consent', 'true');
+                        } catch (e) { }
+                        m.style.display = 'none';
+                        document.body.style.overflow = '';
+                    };
+                }
+
+                if (bDecline) {
+                    bDecline.onclick = function () {
+                        window.location.href = 'https://www.google.com';
+                    };
+                }
+            } catch (e) { }
+        })();
+    </script>
 
     <header>
         <a href="/index.html" class="logo">
@@ -1801,25 +1847,26 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            /* --- Age Verification Modal Logic (GLOBAL FIRST VISIT) --- */
+            /* --- Age Verification Modal Event Handlers --- */
             const modal = document.getElementById('age-modal');
             const btnAccept = document.getElementById('btn-accept');
             const btnDecline = document.getElementById('btn-decline');
 
-            if (localStorage.getItem('ageVerified') !== 'true') {
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
+            if (btnAccept && modal) {
+                btnAccept.addEventListener('click', function () {
+                    try {
+                        sessionStorage.setItem('afm_age_consent', 'true');
+                    } catch (e) { }
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
             }
 
-            btnAccept.addEventListener('click', function () {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                localStorage.setItem('ageVerified', 'true');
-            });
-
-            btnDecline.addEventListener('click', function () {
-                window.location.href = 'https://www.google.com';
-            });
+            if (btnDecline) {
+                btnDecline.addEventListener('click', function () {
+                    window.location.href = 'https://www.google.com';
+                });
+            }
 
             /* --- Category Filtering Logic --- */
             const filterBtns = document.querySelectorAll(".filter-btn");
