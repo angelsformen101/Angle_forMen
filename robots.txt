@@ -1,5 +1,5 @@
 # ==============================================================================
-# Robots.txt for AngelsForMen (https://angelsformen.com)
+# Robots.txt for CityHaldwani (https://cityhaldwani.in)
 # Highly Optimized for Search Engine Crawlers, Image Indexing & AI Search Bots
 # ==============================================================================
 
@@ -77,5 +77,5 @@ Allow: /locations/
 Allow: /llms.txt
 
 # Host & Sitemap Directives
-Host: https://angelsformen.com
-Sitemap: https://angelsformen.com/sitemap.xml
+Host: https://cityhaldwani.in
+Sitemap: https://cityhaldwani.in/sitemap.xml
