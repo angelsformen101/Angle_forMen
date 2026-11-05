@@ -23,7 +23,7 @@ Allow: /public/*.webp
 Allow: /public/*.png
 Allow: /public/*.jpg
 Allow: /logo.png
-Allow: /favicon.png
+Allow: /favicon.webp
 
 User-agent: Googlebot-Video
 Allow: /public/*.mp4
