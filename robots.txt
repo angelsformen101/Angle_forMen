@@ -1,5 +1,5 @@
 # ==============================================================================
-# Robots.txt for CityHaldwani (https://cityhaldwani.in)
+# Robots.txt for CityHaldwani (https://www.cityhaldwani.in)
 # Highly Optimized for Search Engine Crawlers, Image Indexing & AI Search Bots
 # ==============================================================================
 
@@ -77,5 +77,5 @@ Allow: /locations/
 Allow: /llms.txt
 
 # Host & Sitemap Directives
-Host: https://cityhaldwani.in
-Sitemap: https://cityhaldwani.in/sitemap.xml
+Host: https://www.cityhaldwani.in
+Sitemap: https://www.cityhaldwani.in/sitemap.xml
