@@ -179,4 +179,12 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Error & Redirection Page -->
+  <url>
+    <loc>https://www.cityhaldwani.in/404.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

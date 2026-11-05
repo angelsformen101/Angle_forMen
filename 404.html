@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | CityHaldwani</title>
+    <link rel="canonical" href="https://www.cityhaldwani.in/404.html" />
+    <meta name="robots" content="noindex, follow" />
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="theme-color" content="#0a0d14">
+
+    <!-- Graceful Redirection to Home Page -->
+    <meta http-equiv="refresh" content="2; url=/">
+    <script>
+        // Client-side redirect after brief notification
+        setTimeout(function () {
+            window.location.replace('/');
+        }, 2000);
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0a0d14;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .brand-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+
+        .brand-logo img {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-logo span {
+            color: #e91e63;
+        }
+
+        .spinner {
+            width: 44px;
+            height: 44px;
+            border: 3px solid rgba(233, 30, 99, 0.2);
+            border-top-color: #e91e63;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error-code {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #e91e63;
+            line-height: 1;
+            margin-bottom: 12px;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            max-width: 460px;
+        }
+
+        .home-btn {
+            color: #ffffff;
+            background-color: #e91e63;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 9999px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            display: inline-block;
+            box-shadow: 0 4px 14px rgba(233, 30, 99, 0.35);
+        }
+
+        .home-btn:hover {
+            background-color: #c2185b;
+            transform: translateY(-1px);
+        }
+
+        .home-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" class="brand-logo">
+        <img src="logo.png" alt="CityHaldwani">
+        City<span>Haldwani</span>
+    </a>
+
+    <div class="spinner"></div>
+    <div class="error-code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you are looking for does not exist or has been moved.<br>Redirecting you to the home page in a moment...</p>
+    <a href="/" class="home-btn">Go to Homepage Now</a>
+
+    <script>
+        // Prevent Right Click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Prevent keyboard shortcuts
+        document.addEventListener('keydown', function (event) {
+            // Prevent F12
+            if (event.key === 'F12' || event.keyCode === 123) {
+                event.preventDefault();
+                return false;
+            }
+            // Prevent Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+C, Ctrl+P, Ctrl+S
+            if (event.ctrlKey) {
+                if (event.shiftKey && (event.key === 'I' || event.key === 'J' || event.keyCode === 73 || event.keyCode === 74)) {
+                    event.preventDefault();
+                    return false;
+                }
+                if (event.key === 'U' || event.keyCode === 85 ||
+                    event.key === 'C' || event.keyCode === 67 ||
+                    event.key === 'P' || event.keyCode === 80 ||
+                    event.key === 'S' || event.keyCode === 83) {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            // Mac shortcuts
+            if (event.metaKey) {
+                if (event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C' || event.keyCode === 73 || event.keyCode === 74)) {
+                    event.preventDefault();
+                    return false;
+                }
+                if (event.altKey && (event.key === 'I' || event.keyCode === 73)) {
+                    event.preventDefault();
+                    return false;
+                }
+                if (event.key === 'U' || event.keyCode === 85 ||
+                    event.key === 'C' || event.keyCode === 67 ||
+                    event.key === 'P' || event.keyCode === 80 ||
+                    event.key === 'S' || event.keyCode === 83) {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+        });
+
+        // Prevent drag and drop
+        document.addEventListener('dragstart', event => event.preventDefault());
+
+        // Prevent copy event
+        document.addEventListener('copy', event => {
+            event.preventDefault();
+            if (event.clipboardData) {
+                event.clipboardData.setData('text/plain', '');
+            }
+        });
+
+        // Prevent cut event
+        document.addEventListener('cut', event => event.preventDefault());
+
+        // Additional mobile prevention
+        document.documentElement.style.webkitTouchCallout = 'none';
+    </script>
+</body>
+
+</html>
