@@ -15,36 +15,36 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.cityhaldwani.in/locations/ramnagar.html" />
+    <link rel="canonical" href="https://www.angleformen.com/locations/ramnagar.html" />
 
     <!-- Regional Targeting & Hreflangs -->
-    <link rel="alternate" hreflang="en-in" href="https://www.cityhaldwani.in/locations/ramnagar.html" />
-    <link rel="alternate" hreflang="x-default" href="https://www.cityhaldwani.in/locations/ramnagar.html" />
+    <link rel="alternate" hreflang="en-in" href="https://www.angleformen.com/locations/ramnagar.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.angleformen.com/locations/ramnagar.html" />
 
     <!-- Open Graph (OG) Tags -->
     <meta property="og:locale" content="en_IN" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Call Girls & Escort Service in Ramnagar | CityHaldwani" />
+    <meta property="og:title" content="Call Girls & Escort Service in Ramnagar | AngleForMen" />
     <meta property="og:description"
         content="Find the best call girls in Ramnagar. Book premium, Russian, and local independent escorts safely and discreetly near Jim Corbett National Park." />
-    <meta property="og:url" content="https://www.cityhaldwani.in/locations/ramnagar.html" />
-    <meta property="og:site_name" content="CityHaldwani" />
-    <meta property="og:image" content="https://www.cityhaldwani.in/logo.png" />
-    <meta property="og:image:secure_url" content="https://www.cityhaldwani.in/logo.png" />
+    <meta property="og:url" content="https://www.angleformen.com/locations/ramnagar.html" />
+    <meta property="og:site_name" content="AngleForMen" />
+    <meta property="og:image" content="https://www.angleformen.com/logo.png" />
+    <meta property="og:image:secure_url" content="https://www.angleformen.com/logo.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="CityHaldwani Logo" />
+    <meta property="og:image:alt" content="AngleForMen Logo" />
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Call Girls & Escort Service in Ramnagar | CityHaldwani" />
+    <meta name="twitter:title" content="Call Girls & Escort Service in Ramnagar | AngleForMen" />
     <meta name="twitter:description"
         content="Find the best call girls in Ramnagar. Book premium, Russian, and local independent escorts safely and discreetly near Jim Corbett National Park." />
-    <meta name="twitter:image" content="https://www.cityhaldwani.in/logo.png" />
+    <meta name="twitter:image" content="https://www.angleformen.com/logo.png" />
 
     <!-- Mobile UI & Theme Color -->
-    <meta name="theme-color" content="#121212" />
+    <meta name="theme-color" content="#0a0b10" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -55,15 +55,19 @@
     <style>
         /* Base Styles & Dark Theme */
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --primary-color: #e91e63;
-            --text-main: #f5f5f5;
-            --text-muted: #aaaaaa;
+            --bg-color: #0a0b10;
+            --card-bg: #13151f;
+            --card-gradient: linear-gradient(180deg, #151826 0%, #0d0f17 100%);
+            --card-border: rgba(255, 42, 109, 0.22);
+            --primary-color: #ff2a6d;
+            --primary-hover: #e01e5a;
+            --accent-glow: rgba(255, 42, 109, 0.4);
+            --accent-gradient: linear-gradient(135deg, #ff2a6d 0%, #ff5e7e 100%);
+            --text-main: #f8f9fa;
+            --text-muted: #9ba1b0;
             --whatsapp-green: #25D366;
             --tg-blue: #0088cc;
-            --card-border: #ff4c4c;
-            --border-color: #333333;
+            --border-color: #202436;
             --modal-red: #e02424;
         }
 
@@ -256,12 +260,15 @@
 
         /* Header & Navigation */
         header {
-            background-color: #000;
+            background: rgba(10, 11, 16, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             padding: 12px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 1px solid rgba(255, 42, 109, 0.35);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -271,11 +278,12 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 20px;
+            font-size: 21px;
             font-weight: bold;
             color: #fff;
             letter-spacing: 0.5px;
             text-decoration: none;
+            text-shadow: 0 0 12px rgba(255, 42, 109, 0.3);
         }
 
         .logo:hover {
@@ -301,7 +309,7 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 16px;
             margin: 0;
             padding: 0;
             align-items: center;
@@ -309,9 +317,16 @@
 
         nav ul li a {
             color: #fff;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 13.5px;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
         }
 
         /* Mobile Hamburger Menu Toggle */
@@ -433,20 +448,27 @@
         }
 
         .filter-btn {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: #fff;
+            background: rgba(19, 22, 34, 0.85);
+            border: 1px solid rgba(255, 42, 109, 0.25);
+            color: #b0b5c5;
             padding: 10px 25px;
-            border-radius: 25px;
+            border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.25s ease;
         }
 
-        .filter-btn.active,
         .filter-btn:hover {
-            background-color: var(--primary-color);
+            color: #fff;
             border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-gradient, var(--primary-color));
+            color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 18px rgba(255, 42, 109, 0.45);
         }
 
         /* Main Layout: Grid + Sidebar */
@@ -473,7 +495,7 @@
         .profile-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         @keyframes fadeIn {
@@ -489,8 +511,8 @@
         }
 
         .card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
+            background: var(--card-gradient, var(--card-bg));
+            border-radius: 16px;
             border: 1px solid var(--card-border);
             position: relative;
             display: flex;
@@ -498,30 +520,32 @@
             min-height: 220px;
             padding: 15px;
             animation: fadeIn 0.4s ease forwards;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
             box-sizing: border-box;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
         }
 
         .card:hover {
-            border-color: #fff;
-            box-shadow: 0 8px 20px rgba(255, 76, 76, 0.2);
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 18px 38px rgba(255, 42, 109, 0.22);
         }
 
         .vip-badge {
             position: absolute;
             top: -1px;
             right: 20px;
-            background-color: #fff;
-            color: var(--card-border);
-            font-weight: 900;
+            background: var(--accent-gradient, #ff2a6d);
+            color: #ffffff;
+            font-weight: 800;
             font-style: italic;
-            padding: 3px 12px;
+            padding: 4px 14px;
             font-size: 0.8rem;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            border: 1px solid var(--card-border);
-            border-top: none;
-            letter-spacing: 0.5px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: none;
+            letter-spacing: 0.8px;
+            box-shadow: 0 4px 12px rgba(255, 42, 109, 0.45);
             z-index: 10;
         }
 
@@ -563,9 +587,9 @@
         }
 
         .card-title {
-            color: var(--card-border);
-            font-size: 1.1rem;
-            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 700;
             margin-bottom: 8px;
             line-height: 1.4;
             padding-right: 90px;
@@ -574,13 +598,15 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
         }
 
         .card-desc {
             font-size: 0.95rem;
-            color: #ccc;
+            color: #e2e8f0;
             margin-bottom: 15px;
-            line-height: 1.5;
+            line-height: 1.6;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -588,10 +614,11 @@
         }
 
         .card-meta {
-            font-size: 0.85rem;
-            color: #aaa;
+            font-size: 0.88rem;
+            color: #cbd5e1;
             line-height: 1.8;
             margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .card-meta div {
@@ -644,7 +671,7 @@
         .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .sidebar-widget {
@@ -661,6 +688,13 @@
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-widget ul li {
+            color: #e2e8f0;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
 
         .review-item {
@@ -683,8 +717,8 @@
         }
 
         .review-author {
-            color: var(--primary-color);
-            font-weight: bold;
+            color: #ff5e7e;
+            font-weight: 700;
         }
 
         .review-rating {
@@ -692,9 +726,10 @@
         }
 
         .review-text {
-            font-size: 0.9rem;
-            color: #ddd;
+            font-size: 0.92rem;
+            color: #f1f5f9;
             font-style: italic;
+            line-height: 1.5;
         }
 
         /* Local SEO Content */
@@ -814,10 +849,21 @@
         }
 
         /* Revamped Footer */
+                .footer-logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--primary-color);
+        }
         footer {
-            background-color: #050505;
-            padding: 50px 20px 20px 20px;
-            border-top: 2px solid var(--primary-color);
+            background-color: #06070a;
+            padding: 60px 20px 25px 20px;
+            border-top: 1px solid rgba(255, 42, 109, 0.35);
             color: var(--text-muted);
         }
 
@@ -1069,8 +1115,8 @@
 
     <header>
         <a href="/index.html" class="logo">
-            <img src="../logo.png" alt="CityHaldwani" class="logo-img">
-            City<span>Haldwani</span>
+            <img src="../logo.png" alt="AngleForMen" class="logo-img">
+            Angle<span>For</span>Men
         </a>
         <nav>
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -1130,8 +1176,7 @@
                             alt="Kiara VIP Escort Ramnagar"><span class="img-count">🖼️ 3</span></div>
                     <div class="card-content">
                         <div class="card-title">KIARA: PREMIUM VIP ESCORT NEAR JIM CORBETT</div>
-                        <p class="card-desc">High-profile model offering an unforgettable GFE. Perfect for VIP
-                            businessmen visiting the jungle safari for corporate luxury stays.</p>
+                        <p class="card-desc">High-profile model offering an unforgettable GFE. Perfect for gentlemen visiting the jungle safari seeking luxury Jim Corbett VIP escorts for resort stays.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 23 Years</div>
                             <div><span>📍</span> Ramnagar / Corbett Resort</div>
@@ -1160,8 +1205,7 @@
                             alt="Sanya College Girl Kashipur Road"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">SANYA: AFFORDABLE CALL GIRLS RAMNAGAR HAS FOR FUN</div>
-                        <p class="card-desc">Sweet and energetic university student. Available for discreet dates and
-                            fun encounters near Kashipur Road. 100% genuine photos.</p>
+                        <p class="card-desc">Sweet and energetic student companion near Kashipur Road. Available for discreet dates with verified affordable call girls Ramnagar travelers recommend.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 20 Years</div>
                             <div><span>📍</span> Ramnagar / Kashipur Road</div>
@@ -1190,8 +1234,7 @@
                             alt="Ritika Massage Kosi Barrage"><span class="img-count">🖼️ 4</span></div>
                     <div class="card-content">
                         <div class="card-title">RITIKA: TOP RAMNAGAR ESCORT SERVICE NEAR ME</div>
-                        <p class="card-desc">Expert in sensual tantric massage. Melt your stress away in my secure and
-                            fully sanitized private flat near Kosi Barrage.</p>
+                        <p class="card-desc">Expert in sensual tantric massage. Melt your safari fatigue away with the top Ramnagar escort service near me offering doorstep resort visits.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 24 Years</div>
                             <div><span>📍</span> Ramnagar / Kosi Barrage</div>
@@ -1220,8 +1263,7 @@
                             alt="Kavita Ramnagar bhabi call girls"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">KAVITA: THE BEST RAMNAGAR BHABI CALL GIRLS</div>
-                        <p class="card-desc">I am Kavita, a curvy and passionate housewife. If you want to book call
-                            girls in Ramnagar who knows how to deeply satisfy a man, save my number.</p>
+                        <p class="card-desc">Curvy, warm, and passionate homemaker. When you want authentic Ramnagar bhabhi call girls who know how to deeply satisfy a gentleman, contact me.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 28 Years</div>
                             <div><span>📍</span> Ramnagar / Bail Padav</div>
@@ -1250,8 +1292,7 @@
                             alt="Natasha Russian Escorts Ramnagar"><span class="img-count">🖼️ 5</span></div>
                     <div class="card-content">
                         <div class="card-title">NATASHA: EXOTIC RUSSIAN ESCORTS RAMNAGAR</div>
-                        <p class="card-desc">Looking for a foreign escort service in Ramnagar? I am Natasha, bringing
-                            luxury to your private weekend bookings in the Dhela Zone.</p>
+                        <p class="card-desc">Looking for international glamour in the wilderness? I am Natasha, bringing premier Russian escorts in Ramnagar luxury to Dhela and Dhikala resorts.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 24 Years</div>
                             <div><span>📍</span> Ramnagar / Dhela Zone</div>
@@ -1280,8 +1321,7 @@
                             alt="Mehak call girls in Ramnagar"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">MEHAK: CLASSIFIED RAMNAGAR ESCORT DIRECTORY</div>
-                        <p class="card-desc">Fresh face near the Railway Station. Open-minded and ready to offer a safe,
-                            sweet, and highly cooperative dating experience.</p>
+                        <p class="card-desc">Fresh face near the Railway Station. Open-minded and charming companion offering independent escorts Ramnagar dates with 100% verified selfies.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 21 Years</div>
                             <div><span>📍</span> Ramnagar / Railway Station</div>
@@ -1310,8 +1350,7 @@
                             alt="Pooja escort in Ramnagar"><span class="img-count">🖼️ 4</span></div>
                     <div class="card-content">
                         <div class="card-title">POOJA: RELAXING ESCORT IN RAMNAGAR FOR YOU</div>
-                        <p class="card-desc">I am Pooja, a professional spa therapist. For the best escort in Ramnagar
-                            providing therapeutic touch with sensual endings, message me now.</p>
+                        <p class="card-desc">Professional spa therapist offering therapeutic bodywork. When searching for reliable call girls near me Ramnagar, message me for prompt resort visits.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 25 Years</div>
                             <div><span>📍</span> Ramnagar / Jhirna Road</div>
@@ -1340,8 +1379,7 @@
                             alt="Sunita premium call girls Ramnagar"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">SUNITA: PREMIUM CALL GIRLS RAMNAGAR NIGHT STAY</div>
-                        <p class="card-desc">Call me Sunita. If you desire premium call girls Ramnagar has to offer for
-                            overnight company, I bring mature passion and complete satisfaction.</p>
+                        <p class="card-desc">Warm and passionate companion for overnight jungle retreat company. Specializing in full night call girls Ramnagar appointments with complete confidentiality.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 30 Years</div>
                             <div><span>📍</span> Ramnagar / City Center</div>
@@ -1370,8 +1408,7 @@
                             alt="Zara Dubai escorts Ramnagar"><span class="img-count">🖼️ 5</span></div>
                     <div class="card-content">
                         <div class="card-title">ZARA: INTERNATIONAL DUBAI ESCORTS RAMNAGAR</div>
-                        <p class="card-desc">I am Zara, bringing the luxury of Dubai escorts Ramnagar locals rarely see.
-                            Sophisticated travel companion available for high-class events.</p>
+                        <p class="card-desc">Sophisticated travel companion available for high-end events. The premier choice for VIP call girls Ramnagar wildlife tourists prefer.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 23 Years</div>
                             <div><span>📍</span> Ramnagar / Dhikala Rest House</div>
@@ -1400,8 +1437,7 @@
                             alt="Tanya call girls near me contact number"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">TANYA: GET CALL GIRLS NEAR ME CONTACT NUMBER</div>
-                        <p class="card-desc">Hi, I'm Tanya. If you need a call girls near me contact number immediately,
-                            press the call button! I am a playful student ready to meet near the market.</p>
+                        <p class="card-desc">Playful student ready to meet near the market. Press the button for my direct Ramnagar call girls WhatsApp number and transparent cash payment.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 19 Years</div>
                             <div><span>📍</span> Ramnagar / Ramnagar Market</div>
@@ -1430,8 +1466,7 @@
                             alt="Asha Ramnagar escorts"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">ASHA: VERIFIED RAMNAGAR ESCORTS FOR MASSAGE</div>
-                        <p class="card-desc">I am Asha, representing the finest Ramnagar escorts. I specialize in deeply
-                            healing tantric massage with thrilling happy endings at my private apartment.</p>
+                        <p class="card-desc">Deeply healing body-to-body therapies with thrilling happy endings. Premier sensual massage escorts Ramnagar provider at private resort cottages.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 26 Years</div>
                             <div><span>📍</span> Ramnagar / Bijrani Zone Area</div>
@@ -1460,8 +1495,7 @@
                             alt="Rina mature Ramnagar bhabi call girls"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">RINA: BOLD & BEAUTIFUL MATURE COMPANION</div>
-                        <p class="card-desc">Expect a highly satisfying, restriction-free session. Let's make this
-                            evening special with unhurried, passionate intimacy near Ranikhet Road.</p>
+                        <p class="card-desc">Passionate homemaker offering unhurried intimacy along Ranikhet Road. Choose authentic mature escorts Ramnagar visitors trust for pure pleasure.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 33 Years</div>
                             <div><span>📍</span> Ramnagar / Ranikhet Road</div>
@@ -1490,8 +1524,7 @@
                             alt="Aadhya Elite Fashion Model"><span class="img-count">🖼️ 5</span></div>
                     <div class="card-content">
                         <div class="card-title">AADHYA: ELITE FASHION MODEL IN RAMNAGAR</div>
-                        <p class="card-desc">Stunning figure and flawless skin for high-class gentlemen seeking a luxury
-                            date. I am an educated and articulate VIP companion.</p>
+                        <p class="card-desc">Stunning figure and runway style. Discerning gentlemen seeking luxury escorts in Ramnagar receive royal treatment and unforgettable romantic dates.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 24 Years</div>
                             <div><span>📍</span> Ramnagar / Safari Resorts</div>
@@ -1520,8 +1553,7 @@
                             alt="Shruti affordable call girls Ramnagar"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">SHRUTI: BUDGET ESCORT SERVICE RAMNAGAR</div>
-                        <p class="card-desc">Young, highly energetic, and ready to make your evening memorable. Book
-                            this budget escort service for discreet dating.</p>
+                        <p class="card-desc">Young, lively, and very cooperative student companion. Book this budget call girls Ramnagar service for discreet dating without agency markups.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 19 Years</div>
                             <div><span>📍</span> Ramnagar / Degree College Area</div>
@@ -1550,8 +1582,7 @@
                             alt="Neetu escort in Ramnagar"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">NEETU: THE FINEST ESCORT IN RAMNAGAR</div>
-                        <p class="card-desc">Call me Neetu. I am the finest escort in Ramnagar providing an ultimate
-                            exotic Nuru massage with warm oils near Kumeria.</p>
+                        <p class="card-desc">Sensual companion offering exotic Nuru massage with warm oils near Kumeria. Renowned among Corbett resort call girls for complete satisfaction.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 27 Years</div>
                             <div><span>📍</span> Ramnagar / Kumeria</div>
@@ -1580,8 +1611,7 @@
                             alt="Geeta Ramnagar bhabi call girls"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">GEETA: MATURE BHABHI FOR SECRET MEETS</div>
-                        <p class="card-desc">Providing a natural and transactional-free experience in Ringoda. I am an
-                            experienced companion who knows exactly how to please a man.</p>
+                        <p class="card-desc">Providing a natural and transactional-free experience in Ringoda. Counted among genuine call girls in Ramnagar offering passion and privacy.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 32 Years</div>
                             <div><span>📍</span> Ramnagar / Ringoda</div>
@@ -1658,7 +1688,7 @@
         <h2>How to Book Best Online Ramnagar Call Girls</h2>
         <p>Ramnagar, the famous gateway to Jim Corbett National Park in Uttarakhand, is a prime destination for
             businessmen, tourists, and wildlife enthusiasts seeking relaxation. If you are looking to <strong>call
-                girls in Ramnagar</strong>, CityHaldwani provides the most comprehensive and verified directory. Whether
+                girls in Ramnagar</strong>, AngleForMen provides the most comprehensive and verified directory. Whether
             you seek the companionship of a <strong>Ramnagar call girls</strong> for a corporate safari retreat, or
             you simply want to browse the <strong>best call girls Ramnagar escort service</strong> has available for a
             private evening,
@@ -1712,7 +1742,7 @@
 
             <div class="faq-item">
                 <h4>1. How do I book an escort in Ramnagar near Jim Corbett National Park?</h4>
-                <p>Booking an escort in Ramnagar is easy and safe through CityHaldwani. Explore our verified listings,
+                <p>Booking an escort in Ramnagar is easy and safe through AngleForMen. Explore our verified listings,
                     choose a companion available in the Ramnagar/Corbett region, and connect directly on WhatsApp.
                     Confirm your resort location and itinerary with complete confidentiality.</p>
             </div>
@@ -1810,13 +1840,14 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>About CityHaldwani</h4>
-                <p>CityHaldwani is India's most trusted premium directory for independent companions, VIP call girls,
+                <div class="footer-logo">Angle<span>For</span>Men</div>
+                <h4>About AngleForMen</h4>
+                <p>AngleForMen is India's most trusted premium directory for independent companions, VIP call girls,
                     and professional massage services. We prioritize discretion, 100% verified profiles, and
                     zero-tolerance for scams.</p>
                 <p style="margin-top: 15px; font-weight: bold; color: #fff;">Need Help?</p>
-                <p>Email: <a href="mailto:support@cityhaldwani.in"
-                        style="color: var(--primary-color);">support@cityhaldwani.in</a></p>
+                <p>Email: <a href="mailto:support@angleformen.com"
+                        style="color: var(--primary-color);">support@angleformen.com</a></p>
             </div>
 
             <div class="footer-col">
@@ -1845,13 +1876,13 @@
                 <h4 style="color: var(--card-border); border-bottom-color: var(--card-border);">18+ Warning</h4>
                 <p>This website contains adult-oriented material. By continuing to browse, you confirm that you are at
                     least 18 years of age (or the age of majority in your jurisdiction).</p>
-                <p>CityHaldwani operates solely as a classified advertising directory and does not employ any
+                <p>AngleForMen operates solely as a classified advertising directory and does not employ any
                     individuals listed.</p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 CityHaldwani. All Rights Reserved.</p>
+            <p>&copy; 2026 AngleForMen. All Rights Reserved.</p>
         </div>
     </footer>
 

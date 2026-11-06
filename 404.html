@@ -10,14 +10,24 @@
     <meta http-equiv="refresh" content="0; url=/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | CityHaldwani</title>
-    <link rel="canonical" href="https://www.cityhaldwani.in/404.html" />
+    <title>404 - Page Not Found | AngleForMen</title>
+    <link rel="canonical" href="https://www.angleformen.com/404.html" />
+    <link rel="alternate" hreflang="en-in" href="https://www.angleformen.com/404.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.angleformen.com/404.html" />
     <meta name="robots" content="noindex, follow" />
+
+    <!-- Open Graph (OG) Tags -->
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="404 - Page Not Found | AngleForMen" />
+    <meta property="og:description" content="The page you are looking for does not exist. Redirecting to AngleForMen homepage." />
+    <meta property="og:url" content="https://www.angleformen.com/404.html" />
+    <meta property="og:site_name" content="AngleForMen" />
 
     <!-- Favicon & Icons -->
     <link rel="icon" href="favicon.webp" type="image/png">
     <link rel="apple-touch-icon" href="favicon.webp">
-    <meta name="theme-color" content="#0a0d14">
+    <meta name="theme-color" content="#0a0b10">
 
     <style>
         * {
@@ -26,9 +36,18 @@
             padding: 0;
         }
 
+        :root {
+            --bg-color: #0a0b10;
+            --primary-color: #ff2a6d;
+            --primary-hover: #e01e5a;
+            --accent-glow: rgba(255, 42, 109, 0.4);
+            --text-main: #ffffff;
+            --text-muted: #9ba1b0;
+        }
+
         body {
-            background-color: #0a0d14;
-            color: #ffffff;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -36,173 +55,157 @@
             justify-content: center;
             min-height: 100vh;
             text-align: center;
-            padding: 20px;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            padding: 24px;
+            overflow: hidden;
+            position: relative;
         }
 
-        .brand-logo {
-            display: inline-flex;
+        /* Ambient Glow Backdrop */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(255, 42, 109, 0.12) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 540px;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
             text-decoration: none;
-            color: #ffffff;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 24px;
         }
 
-        .brand-logo img {
-            height: 32px;
+        .logo-img {
+            height: 42px;
             width: auto;
-            object-fit: contain;
-            display: block;
+            border-radius: 6px;
         }
 
-        .brand-logo span {
-            color: #e91e63;
+        .logo-text {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
 
+        .logo-text span {
+            color: var(--primary-color);
+        }
+
+        /* Glowing Spinner */
         .spinner {
-            width: 44px;
-            height: 44px;
-            border: 3px solid rgba(233, 30, 99, 0.2);
-            border-top-color: #e91e63;
+            width: 52px;
+            height: 52px;
+            border: 3px solid rgba(255, 42, 109, 0.15);
+            border-top: 3px solid var(--primary-color);
+            border-right: 3px solid var(--primary-color);
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            margin-bottom: 20px;
+            animation: spin 0.8s cubic-bezier(0.6, 0.2, 0.4, 0.8) infinite;
+            margin: 15px auto 25px;
+            box-shadow: 0 0 20px rgba(255, 42, 109, 0.35);
         }
 
         @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .error-code {
-            font-size: 4rem;
-            font-weight: 800;
-            color: #e91e63;
+            font-size: 5.5rem;
+            font-weight: 900;
             line-height: 1;
+            background: linear-gradient(135deg, #ffffff 0%, #ff2a6d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 12px;
-            letter-spacing: -0.03em;
+            letter-spacing: -2px;
         }
 
         h1 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            color: #ffffff;
         }
 
         p {
-            color: #a1a1aa;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 24px;
-            max-width: 460px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
 
-        .home-btn {
-            color: #ffffff;
-            background-color: #e91e63;
-            text-decoration: none;
-            font-size: 0.9rem;
+        .redirect-notice {
+            font-size: 0.92rem;
+            color: #f43f5e;
+            margin-bottom: 30px;
             font-weight: 600;
-            padding: 12px 28px;
-            border-radius: 9999px;
-            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-home {
+            background: linear-gradient(135deg, #ff2a6d 0%, #ff5e7e 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 34px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 20px rgba(255, 42, 109, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: inline-block;
-            box-shadow: 0 4px 14px rgba(233, 30, 99, 0.35);
         }
 
-        .home-btn:hover {
-            background-color: #c2185b;
-            transform: translateY(-1px);
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 42, 109, 0.6);
+            color: #ffffff;
         }
 
-        .home-btn:active {
-            transform: translateY(0);
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #64748b;
         }
     </style>
 </head>
 
 <body>
-    <a href="/" class="brand-logo">
-        <img src="logo.png" alt="CityHaldwani">
-        City<span>Haldwani</span>
-    </a>
+    <div class="content-wrap">
+        <a href="/" class="logo-wrap">
+            <img src="logo.png" alt="AngleForMen" class="logo-img">
+            <div class="logo-text">Angle<span>For</span>Men</div>
+        </a>
 
-    <div class="spinner"></div>
-    <div class="error-code">404</div>
-    <h1>Page Not Found</h1>
-    <p>Redirecting you to the home page...</p>
-    <a href="/" class="home-btn">Go to Homepage Now</a>
+        <div class="spinner"></div>
 
-    <script>
-        // Prevent Right Click
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        <div class="error-code">404</div>
+        <h1>Destination Not Found</h1>
+        <p>The companion profile, location directory, or page you are looking for does not exist or has moved.</p>
+        <p class="redirect-notice">Serving instant redirect to AngleForMen homepage...</p>
 
-        // Prevent keyboard shortcuts
-        document.addEventListener('keydown', function (event) {
-            // Prevent F12
-            if (event.key === 'F12' || event.keyCode === 123) {
-                event.preventDefault();
-                return false;
-            }
-            // Prevent Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+C, Ctrl+P, Ctrl+S
-            if (event.ctrlKey) {
-                if (event.shiftKey && (event.key === 'I' || event.key === 'J' || event.keyCode === 73 || event.keyCode === 74)) {
-                    event.preventDefault();
-                    return false;
-                }
-                if (event.key === 'U' || event.keyCode === 85 ||
-                    event.key === 'C' || event.keyCode === 67 ||
-                    event.key === 'P' || event.keyCode === 80 ||
-                    event.key === 'S' || event.keyCode === 83) {
-                    event.preventDefault();
-                    return false;
-                }
-            }
-            // Mac shortcuts
-            if (event.metaKey) {
-                if (event.shiftKey && (event.key === 'I' || event.key === 'J' || event.key === 'C' || event.keyCode === 73 || event.keyCode === 74)) {
-                    event.preventDefault();
-                    return false;
-                }
-                if (event.altKey && (event.key === 'I' || event.keyCode === 73)) {
-                    event.preventDefault();
-                    return false;
-                }
-                if (event.key === 'U' || event.keyCode === 85 ||
-                    event.key === 'C' || event.keyCode === 67 ||
-                    event.key === 'P' || event.keyCode === 80 ||
-                    event.key === 'S' || event.keyCode === 83) {
-                    event.preventDefault();
-                    return false;
-                }
-            }
-        });
+        <a href="/" class="btn-home">Go to Homepage Now</a>
 
-        // Prevent drag and drop
-        document.addEventListener('dragstart', event => event.preventDefault());
-
-        // Prevent copy event
-        document.addEventListener('copy', event => {
-            event.preventDefault();
-            if (event.clipboardData) {
-                event.clipboardData.setData('text/plain', '');
-            }
-        });
-
-        // Prevent cut event
-        document.addEventListener('cut', event => event.preventDefault());
-
-        // Additional mobile prevention
-        document.documentElement.style.webkitTouchCallout = 'none';
-    </script>
+        <div class="footer-note">
+            &copy; 2026 AngleForMen. All Rights Reserved. 18+ Adult Directory.
+        </div>
+    </div>
 </body>
-
 </html>

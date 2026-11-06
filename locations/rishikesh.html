@@ -15,36 +15,36 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.cityhaldwani.in/locations/rishikesh.html" />
+    <link rel="canonical" href="https://www.angleformen.com/locations/rishikesh.html" />
 
     <!-- Regional Targeting & Hreflangs -->
-    <link rel="alternate" hreflang="en-in" href="https://www.cityhaldwani.in/locations/rishikesh.html" />
-    <link rel="alternate" hreflang="x-default" href="https://www.cityhaldwani.in/locations/rishikesh.html" />
+    <link rel="alternate" hreflang="en-in" href="https://www.angleformen.com/locations/rishikesh.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.angleformen.com/locations/rishikesh.html" />
 
     <!-- Open Graph (OG) Tags -->
     <meta property="og:locale" content="en_IN" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Call Girls & Escort Service in Rishikesh | CityHaldwani" />
+    <meta property="og:title" content="Call Girls & Escort Service in Rishikesh | AngleForMen" />
     <meta property="og:description"
         content="Discover the finest call girls in Rishikesh. Book elite VIP escorts, independent companions, and sensual massage therapists safely and discreetly." />
-    <meta property="og:url" content="https://www.cityhaldwani.in/locations/rishikesh.html" />
-    <meta property="og:site_name" content="CityHaldwani" />
-    <meta property="og:image" content="https://www.cityhaldwani.in/logo.png" />
-    <meta property="og:image:secure_url" content="https://www.cityhaldwani.in/logo.png" />
+    <meta property="og:url" content="https://www.angleformen.com/locations/rishikesh.html" />
+    <meta property="og:site_name" content="AngleForMen" />
+    <meta property="og:image" content="https://www.angleformen.com/logo.png" />
+    <meta property="og:image:secure_url" content="https://www.angleformen.com/logo.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="CityHaldwani Logo" />
+    <meta property="og:image:alt" content="AngleForMen Logo" />
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Call Girls & Escort Service in Rishikesh | CityHaldwani" />
+    <meta name="twitter:title" content="Call Girls & Escort Service in Rishikesh | AngleForMen" />
     <meta name="twitter:description"
         content="Discover the finest call girls in Rishikesh. Book elite VIP escorts, independent companions, and sensual massage therapists safely and discreetly." />
-    <meta name="twitter:image" content="https://www.cityhaldwani.in/logo.png" />
+    <meta name="twitter:image" content="https://www.angleformen.com/logo.png" />
 
     <!-- Mobile UI & Theme Color -->
-    <meta name="theme-color" content="#121212" />
+    <meta name="theme-color" content="#0a0b10" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -55,15 +55,19 @@
     <style>
         /* Base Styles & Dark Theme */
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --primary-color: #e91e63;
-            --text-main: #f5f5f5;
-            --text-muted: #aaaaaa;
+            --bg-color: #0a0b10;
+            --card-bg: #13151f;
+            --card-gradient: linear-gradient(180deg, #151826 0%, #0d0f17 100%);
+            --card-border: rgba(255, 42, 109, 0.22);
+            --primary-color: #ff2a6d;
+            --primary-hover: #e01e5a;
+            --accent-glow: rgba(255, 42, 109, 0.4);
+            --accent-gradient: linear-gradient(135deg, #ff2a6d 0%, #ff5e7e 100%);
+            --text-main: #f8f9fa;
+            --text-muted: #9ba1b0;
             --whatsapp-green: #25D366;
             --tg-blue: #0088cc;
-            --card-border: #ff4c4c;
-            --border-color: #333333;
+            --border-color: #202436;
             --modal-red: #e02424;
         }
 
@@ -256,12 +260,15 @@
 
         /* Header & Navigation */
         header {
-            background-color: #000;
+            background: rgba(10, 11, 16, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             padding: 12px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 1px solid rgba(255, 42, 109, 0.35);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -271,11 +278,12 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 20px;
+            font-size: 21px;
             font-weight: bold;
             color: #fff;
             letter-spacing: 0.5px;
             text-decoration: none;
+            text-shadow: 0 0 12px rgba(255, 42, 109, 0.3);
         }
 
         .logo:hover {
@@ -301,7 +309,7 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 16px;
             margin: 0;
             padding: 0;
             align-items: center;
@@ -309,9 +317,16 @@
 
         nav ul li a {
             color: #fff;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 13.5px;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
         }
 
         /* Mobile Hamburger Menu Toggle */
@@ -434,20 +449,27 @@
         }
 
         .filter-btn {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: #fff;
+            background: rgba(19, 22, 34, 0.85);
+            border: 1px solid rgba(255, 42, 109, 0.25);
+            color: #b0b5c5;
             padding: 10px 25px;
-            border-radius: 25px;
+            border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.25s ease;
         }
 
-        .filter-btn.active,
         .filter-btn:hover {
-            background-color: var(--primary-color);
+            color: #fff;
             border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-gradient, var(--primary-color));
+            color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 18px rgba(255, 42, 109, 0.45);
         }
 
         /* Main Layout: Grid + Sidebar */
@@ -474,7 +496,7 @@
         .profile-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         @keyframes fadeIn {
@@ -490,8 +512,8 @@
         }
 
         .card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
+            background: var(--card-gradient, var(--card-bg));
+            border-radius: 16px;
             border: 1px solid var(--card-border);
             position: relative;
             display: flex;
@@ -499,30 +521,32 @@
             min-height: 220px;
             padding: 15px;
             animation: fadeIn 0.4s ease forwards;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
             box-sizing: border-box;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
         }
 
         .card:hover {
-            border-color: #fff;
-            box-shadow: 0 8px 20px rgba(255, 76, 76, 0.2);
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 18px 38px rgba(255, 42, 109, 0.22);
         }
 
         .vip-badge {
             position: absolute;
             top: -1px;
             right: 20px;
-            background-color: #fff;
-            color: var(--card-border);
-            font-weight: 900;
+            background: var(--accent-gradient, #ff2a6d);
+            color: #ffffff;
+            font-weight: 800;
             font-style: italic;
-            padding: 3px 12px;
+            padding: 4px 14px;
             font-size: 0.8rem;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            border: 1px solid var(--card-border);
-            border-top: none;
-            letter-spacing: 0.5px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border: none;
+            letter-spacing: 0.8px;
+            box-shadow: 0 4px 12px rgba(255, 42, 109, 0.45);
             z-index: 10;
         }
 
@@ -564,9 +588,9 @@
         }
 
         .card-title {
-            color: var(--card-border);
-            font-size: 1.1rem;
-            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: 700;
             margin-bottom: 8px;
             line-height: 1.4;
             padding-right: 90px;
@@ -575,13 +599,15 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
         }
 
         .card-desc {
             font-size: 0.95rem;
-            color: #ccc;
+            color: #e2e8f0;
             margin-bottom: 15px;
-            line-height: 1.5;
+            line-height: 1.6;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -589,10 +615,11 @@
         }
 
         .card-meta {
-            font-size: 0.85rem;
-            color: #aaa;
+            font-size: 0.88rem;
+            color: #cbd5e1;
             line-height: 1.8;
             margin-bottom: 15px;
+            font-weight: 500;
         }
 
         .card-meta div {
@@ -645,7 +672,7 @@
         .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .sidebar-widget {
@@ -662,6 +689,13 @@
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-widget ul li {
+            color: #e2e8f0;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
 
         .review-item {
@@ -684,8 +718,8 @@
         }
 
         .review-author {
-            color: var(--primary-color);
-            font-weight: bold;
+            color: #ff5e7e;
+            font-weight: 700;
         }
 
         .review-rating {
@@ -693,9 +727,10 @@
         }
 
         .review-text {
-            font-size: 0.9rem;
-            color: #ddd;
+            font-size: 0.92rem;
+            color: #f1f5f9;
             font-style: italic;
+            line-height: 1.5;
         }
 
         /* Local SEO Content */
@@ -815,10 +850,21 @@
         }
 
         /* Revamped Footer */
+                .footer-logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--primary-color);
+        }
         footer {
-            background-color: #050505;
-            padding: 50px 20px 20px 20px;
-            border-top: 2px solid var(--primary-color);
+            background-color: #06070a;
+            padding: 60px 20px 25px 20px;
+            border-top: 1px solid rgba(255, 42, 109, 0.35);
             color: var(--text-muted);
         }
 
@@ -1070,8 +1116,8 @@
 
     <header>
         <a href="/index.html" class="logo">
-            <img src="../logo.png" alt="CityHaldwani" class="logo-img">
-            City<span>Haldwani</span>
+            <img src="../logo.png" alt="AngleForMen" class="logo-img">
+            Angle<span>For</span>Men
         </a>
         <nav>
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -1129,8 +1175,7 @@
                             alt="Sakshi VIP Escort Rishikesh"><span class="img-count">🖼️ 3</span></div>
                     <div class="card-content">
                         <div class="card-title">SAKSHI: PREMIUM VIP ESCORT IN TAPOVAN</div>
-                        <p class="card-desc">Looking for high-class companionship in the yoga capital? I offer an
-                            unforgettable GFE for gentlemen seeking absolute luxury.</p>
+                        <p class="card-desc">Looking for high-class VIP escorts in Tapovan Rishikesh? I offer an unforgettable, deeply affectionate Girlfriend Experience for elite gentlemen seeking absolute luxury at 5-star riverside resorts.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 22 Years</div>
                             <div><span>📍</span> Rishikesh / Tapovan</div>
@@ -1159,8 +1204,7 @@
                             alt="Neha Call Girls Rishikesh"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">NEHA: SWEET COLLEGE GIRL FOR OUT CALLS</div>
-                        <p class="card-desc">I am young, highly cooperative, and very fun to be around. Perfect for
-                            discreet dates around Rishikesh resorts.</p>
+                        <p class="card-desc">I am a charming, cheerful student available for top-rated Rishikesh call girls service. Perfect for discreet evening dates, casual cafe visits, and private outcalls to luxury hotels.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 20 Years</div>
                             <div><span>📍</span> Rishikesh / Laxman Jhula</div>
@@ -1189,8 +1233,7 @@
                             alt="Maya Massage Rishikesh"><span class="img-count">🖼️ 4</span></div>
                     <div class="card-content">
                         <div class="card-title">MAYA: SENSUAL EROTIC SPA MASSAGE RISHIKESH</div>
-                        <p class="card-desc">Relax your body and soul after a long day. I specialize in deeply
-                            satisfying tantric massage with happy endings.</p>
+                        <p class="card-desc">Relax your body and soul with certified erotic massage in Rishikesh. I specialize in deeply satisfying Nuru and Swedish therapies with relaxing finishes at private, sanitized venues.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 25 Years</div>
                             <div><span>📍</span> Rishikesh / Muni Ki Reti</div>
@@ -1219,8 +1262,7 @@
                             alt="Simran Housewife Rishikesh"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">SIMRAN: LOCAL MATURE BHABHI FOR SECRET MEETS</div>
-                        <p class="card-desc">I am an experienced and curvy housewife looking for passionate moments with
-                            polite gentlemen. Discretion is completely guaranteed.</p>
+                        <p class="card-desc">Passionate and caring homemaker offering genuine companionship among independent escorts Rishikesh gentlemen trust. 100% discrete private moments with cash on delivery.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 29 Years</div>
                             <div><span>📍</span> Rishikesh / Ram Jhula</div>
@@ -1249,8 +1291,7 @@
                             alt="Zoya Russian Escorts Rishikesh"><span class="img-count">🖼️ 5</span></div>
                     <div class="card-content">
                         <div class="card-title">ZOYA: ELITE RUSSIAN ESCORT IN RISHIKESH</div>
-                        <p class="card-desc">I am a touring international model bringing world-class luxury to
-                            Rishikesh. Perfect for exclusive weekend getaways.</p>
+                        <p class="card-desc">Touring European model bringing glamour and sophistication to Uttarakhand. If you desire elite Russian escorts in Rishikesh, book me for luxury resort outcalls and private stays.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 24 Years</div>
                             <div><span>📍</span> Rishikesh / Badrinath Road</div>
@@ -1279,8 +1320,7 @@
                             alt="Divya College Companion Rishikesh"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">DIVYA: FRESH STUDENT COMPANION</div>
-                        <p class="card-desc">I am a cute, innocent-looking student available for short-time fun and
-                            relaxing overnight stays along the Ganges.</p>
+                        <p class="card-desc">Cute and youthful university student offering genuine college call girls Rishikesh companionship. Available for relaxed short-time meetings and weekend getaways along the Ganges.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 19 Years</div>
                             <div><span>📍</span> Rishikesh / Shivpuri</div>
@@ -1309,8 +1349,7 @@
                             alt="Kirti Nuru Massage"><span class="img-count">🖼️ 4</span></div>
                     <div class="card-content">
                         <div class="card-title">KIRTI: HEALING NURU MASSAGE BY EXPERT</div>
-                        <p class="card-desc">Relieve stress with warm oils and intense body-to-body contact. I offer the
-                            best incall service in Rishikesh.</p>
+                        <p class="card-desc">Relieve travel fatigue with warm herbal oils and therapeutic bodywork. Rated the #1 Nuru massage Rishikesh specialist for stress relief and full satisfaction.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 26 Years</div>
                             <div><span>📍</span> Rishikesh / Tapovan</div>
@@ -1339,8 +1378,7 @@
                             alt="Rupa Aunty Escort Rishikesh"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">RUPA: HOT AUNTY ESCORT FOR DISCREET FUN</div>
-                        <p class="card-desc">I provide completely unhurried, natural intimacy. Let's enjoy a beautiful
-                            night filled with passion and mature satisfaction.</p>
+                        <p class="card-desc">Warm and accommodating companion offering unhurried intimacy among mature call girls Rishikesh visitors adore. Perfect for quiet hotel dinners and passionate overnight stays.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 31 Years</div>
                             <div><span>📍</span> Rishikesh / AIIMS Road</div>
@@ -1369,8 +1407,7 @@
                             alt="Tara High Class Escort"><span class="img-count">🖼️ 3</span></div>
                     <div class="card-content">
                         <div class="card-title">TARA: HIGH-CLASS INDEPENDENT COMPANION</div>
-                        <p class="card-desc">Educated, beautiful, and highly articulate. I am your perfect plus-one for
-                            corporate events and private romantic dinners.</p>
+                        <p class="card-desc">Educated, articulate, and stunning companion. Providing premier Laxman Jhula escort service for corporate executives and discreet travelers staying in luxury suites.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 23 Years</div>
                             <div><span>📍</span> Rishikesh / Laxman Jhula</div>
@@ -1399,8 +1436,7 @@
                             alt="Naina Local Girl Rishikesh"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">NAINA: PLAYFUL LOCAL GIRL FOR DATING</div>
-                        <p class="card-desc">Fun-loving, chatty, and very open-minded. Call me for an amazing girlfriend
-                            experience near the Ganges today.</p>
+                        <p class="card-desc">Fun-loving and friendly local companion. When searching for reliable call girls near me Rishikesh, call me for transparent cash payment and an amazing romantic time.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 20 Years</div>
                             <div><span>📍</span> Rishikesh / Triveni Ghat</div>
@@ -1429,8 +1465,7 @@
                             alt="Sneha Spa Therapist"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">SNEHA: EXOTIC SPA THERAPIST RISHIKESH</div>
-                        <p class="card-desc">Professional therapies mixed with deeply sensual finishes. Safe, private
-                            flat available for tourists seeking peace.</p>
+                        <p class="card-desc">Certified spa therapist delivering blissful full-body rejuvenation. Choose the best spa escorts Rishikesh has to offer for safe, private apartment appointments.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 27 Years</div>
                             <div><span>📍</span> Rishikesh / Ram Jhula</div>
@@ -1459,8 +1494,7 @@
                             alt="Chahat Mature Companion"><span class="img-count">🖼️ 4</span></div>
                     <div class="card-content">
                         <div class="card-title">CHAHAT: BOLD & BEAUTIFUL MATURE COMPANION</div>
-                        <p class="card-desc">I know exactly what men want. Expect a highly satisfying, restriction-free
-                            session. Let's make this evening special.</p>
+                        <p class="card-desc">Sensual and open-minded companion specializing in full night call girls Rishikesh appointments. Complete emotional warmth and zero rush guaranteed.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 33 Years</div>
                             <div><span>📍</span> Rishikesh / Muni Ki Reti</div>
@@ -1489,8 +1523,7 @@
                             alt="Ayesha VIP Escort"><span class="img-count">🖼️ 2</span></div>
                     <div class="card-content">
                         <div class="card-title">AYESHA: LUXURY ESCORT FOR VIP GENTLEMEN</div>
-                        <p class="card-desc">Stunning figure and flawless skin. Available exclusively for 5-star hotel
-                            visits and high-class clients.</p>
+                        <p class="card-desc">Stunning figure and high-fashion style. Representing top luxury escort service Rishikesh VIPs prefer for discreet 5-star hotel visits and private gatherings.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 24 Years</div>
                             <div><span>📍</span> Rishikesh / Tapovan</div>
@@ -1519,8 +1552,7 @@
                             alt="Ishita Budget Escort"><span class="img-count">🖼️ 3</span></div>
                     <div class="card-content">
                         <div class="card-title">ISHITA: AFFORDABLE COLLEGE GIRL RISHIKESH</div>
-                        <p class="card-desc">Budget-friendly and incredibly sweet. Get my contact number for instant
-                            booking and a warm companion experience.</p>
+                        <p class="card-desc">Sweet and bubbly student companion providing budget call girls in Rishikesh. Zero advance, direct coordination, and authentic verified photographs.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 20 Years</div>
                             <div><span>📍</span> Rishikesh / Badrinath Road</div>
@@ -1549,8 +1581,7 @@
                             alt="Kavya Tantric Massage"><span class="img-count">🖼️ 1</span></div>
                     <div class="card-content">
                         <div class="card-title">KAVYA: TANTRIC MASSAGE EXPERT</div>
-                        <p class="card-desc">Awaken your senses with traditional tantric healing and intense erotic
-                            touch in my private flat.</p>
+                        <p class="card-desc">Awaken your senses with authentic tantric massage escorts Rishikesh travelers recommend. Soothing strokes and complete mental peace in a sanitized environment.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 26 Years</div>
                             <div><span>📍</span> Rishikesh / Shivpuri</div>
@@ -1579,8 +1610,7 @@
                             alt="Priya Top Model"><span class="img-count">🖼️ 6</span></div>
                     <div class="card-content">
                         <div class="card-title">PRIYA: TOP RATED ESCORT MODEL RISHIKESH</div>
-                        <p class="card-desc">The most sought-after model in town. Book me for a weekend of pure luxury
-                            and bliss.</p>
+                        <p class="card-desc">The most sought-after model in town. It takes just one click to book call girl in Rishikesh with verified photos, zero online advance, and total privacy.</p>
                         <div class="card-meta">
                             <div><span>🪪</span> 23 Years</div>
                             <div><span>📍</span> Rishikesh / Laxman Jhula</div>
@@ -1658,7 +1688,7 @@
             getaway for tourists and businessmen seeking ultimate relaxation. If you are looking for a <strong>Rishikesh
                 call
                 girls
-            </strong>, CityHaldwani provides a meticulously verified directory. Whether you need
+            </strong>, AngleForMen provides a meticulously verified directory. Whether you need
             companionship for a private retreat near the Ganges or you want to book the <strong>best call girls
                 Rishikesh</strong> has to offer for a resort stay, we connect you with premium beauty.</p>
 
@@ -1708,7 +1738,7 @@
 
             <div class="faq-item">
                 <h4>1. How can I safely book a verified call girls in Rishikesh?</h4>
-                <p>Booking a verified call girls in Rishikesh is straightforward on CityHaldwani. Browse our local
+                <p>Booking a verified call girls in Rishikesh is straightforward on AngleForMen. Browse our local
                     directory, pick a companion near Tapovan, Laxman Jhula, or Shivpuri, and message her directly on
                     WhatsApp. Ask for a live photo or quick video confirmation before sharing your room number.</p>
             </div>
@@ -1807,13 +1837,14 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>About CityHaldwani</h4>
-                <p>CityHaldwani is India's most trusted premium directory for independent companions, VIP call girls,
+                <div class="footer-logo">Angle<span>For</span>Men</div>
+                <h4>About AngleForMen</h4>
+                <p>AngleForMen is India's most trusted premium directory for independent companions, VIP call girls,
                     and professional massage services. We prioritize discretion, 100% verified profiles, and
                     zero-tolerance for scams.</p>
                 <p style="margin-top: 15px; font-weight: bold; color: #fff;">Need Help?</p>
-                <p>Email: <a href="mailto:support@cityhaldwani.in"
-                        style="color: var(--primary-color);">support@cityhaldwani.in</a></p>
+                <p>Email: <a href="mailto:support@angleformen.com"
+                        style="color: var(--primary-color);">support@angleformen.com</a></p>
             </div>
 
             <div class="footer-col">
@@ -1842,13 +1873,13 @@
                 <h4 style="color: var(--card-border); border-bottom-color: var(--card-border);">18+ Warning</h4>
                 <p>This website contains adult-oriented material. By continuing to browse, you confirm that you are at
                     least 18 years of age (or the age of majority in your jurisdiction).</p>
-                <p>CityHaldwani operates solely as a classified advertising directory and does not employ any
+                <p>AngleForMen operates solely as a classified advertising directory and does not employ any
                     individuals listed.</p>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 CityHaldwani. All Rights Reserved.</p>
+            <p>&copy; 2026 AngleForMen. All Rights Reserved.</p>
         </div>
     </footer>
 
