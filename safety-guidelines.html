@@ -489,6 +489,51 @@
             }
         }
     </style>
+    <!-- Anti-Copy, Anti-Screenshot & Content Protection Styles -->
+    <style id="page-protection-css">
+        *, *::before, *::after {
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+            -webkit-touch-callout: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        input, textarea {
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+            user-select: text !important;
+        }
+
+        img, video, picture {
+            -webkit-user-drag: none !important;
+            -khtml-user-drag: none !important;
+            -moz-user-drag: none !important;
+            -o-user-drag: none !important;
+            user-drag: none !important;
+            pointer-events: auto;
+        }
+
+        .page-blur-shield {
+            filter: blur(20px) !important;
+            -webkit-filter: blur(20px) !important;
+            opacity: 0.1 !important;
+            transition: filter 0.1s ease, opacity 0.1s ease;
+        }
+
+        @media print {
+            html, body {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                max-height: 0 !important;
+                overflow: hidden !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -696,6 +741,201 @@
                 });
             }
         });
+    </script>
+    <!-- Anti-Copy, Anti-Inspect & Screenshot Protection Script -->
+    <script id="page-protection-js">
+        (function () {
+            'use strict';
+
+            function isFormInput(el) {
+                if (!el) return false;
+                var tag = el.tagName ? el.tagName.toLowerCase() : '';
+                return tag === 'input' || tag === 'textarea' || el.isContentEditable;
+            }
+
+            // 1. Disable Right Click & Context Menu (Desktop & Mobile long-press)
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+                return false;
+            }, { capture: true });
+
+            // 2. Prevent Copy & Cut Outside Form Fields
+            document.addEventListener('copy', function (e) {
+                if (!isFormInput(e.target)) {
+                    e.preventDefault();
+                    if (e.clipboardData) {
+                        e.clipboardData.setData('text/plain', '');
+                    }
+                    return false;
+                }
+            }, { capture: true });
+
+            document.addEventListener('cut', function (e) {
+                if (!isFormInput(e.target)) {
+                    e.preventDefault();
+                    return false;
+                }
+            }, { capture: true });
+
+            // 3. Prevent Drag and Select Start Outside Form Fields
+            document.addEventListener('dragstart', function (e) {
+                if (!isFormInput(e.target)) {
+                    e.preventDefault();
+                    return false;
+                }
+            }, { capture: true });
+
+            document.addEventListener('selectstart', function (e) {
+                if (!isFormInput(e.target)) {
+                    e.preventDefault();
+                    return false;
+                }
+            }, { capture: true });
+
+            // 4. Block Inspection & Developer Keyboard Shortcuts
+            document.addEventListener('keydown', function (e) {
+                var key = e.key;
+                var code = e.keyCode || e.which;
+                var ctrl = e.ctrlKey || e.metaKey;
+                var shift = e.shiftKey;
+                var target = e.target;
+
+                // F12 key
+                if (key === 'F12' || code === 123) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (DevTools inspect/console)
+                if (ctrl && shift && (key === 'I' || key === 'i' || code === 73 ||
+                                      key === 'J' || key === 'j' || code === 74 ||
+                                      key === 'C' || key === 'c' || code === 67)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // Ctrl+U (View Source)
+                if (ctrl && (key === 'U' || key === 'u' || code === 85)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // Ctrl+S (Save Page)
+                if (ctrl && (key === 'S' || key === 's' || code === 83)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // Ctrl+P (Print Page)
+                if (ctrl && (key === 'P' || key === 'p' || code === 80)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // Ctrl+A (Select All outside form fields)
+                if (ctrl && (key === 'A' || key === 'a' || code === 65) && !isFormInput(target)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // Ctrl+C (Copy outside form fields)
+                if (ctrl && (key === 'C' || key === 'c' || code === 67) && !isFormInput(target)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+
+                // PrintScreen Key on Keydown
+                if (key === 'PrintScreen' || code === 44) {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText('').catch(function () {});
+                    }
+                    if (document.body) {
+                        document.body.classList.add('page-blur-shield');
+                        setTimeout(function () {
+                            if (document.body) {
+                                document.body.classList.remove('page-blur-shield');
+                            }
+                        }, 1200);
+                    }
+                    e.preventDefault();
+                    return false;
+                }
+            }, { capture: true });
+
+            // 5. Clear Clipboard on PrintScreen Keyup
+            window.addEventListener('keyup', function (e) {
+                var key = e.key;
+                var code = e.keyCode || e.which;
+                if (key === 'PrintScreen' || code === 44) {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText('').catch(function () {});
+                    }
+                }
+            }, { capture: true });
+
+            // 6. Focus Loss / Inactivity Protection (Screen Capture / App Switch Shield)
+            function enableShield() {
+                if (document.body) {
+                    document.body.classList.add('page-blur-shield');
+                }
+            }
+
+            function disableShield() {
+                if (document.body) {
+                    document.body.classList.remove('page-blur-shield');
+                }
+            }
+
+            window.addEventListener('blur', enableShield);
+            window.addEventListener('focus', disableShield);
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    enableShield();
+                } else {
+                    disableShield();
+                }
+            });
+            document.addEventListener('touchstart', disableShield, { passive: true });
+            document.addEventListener('mousedown', disableShield, { passive: true });
+            document.addEventListener('mousemove', disableShield, { passive: true });
+
+            // 7. Print Obfuscation
+            window.addEventListener('beforeprint', function () {
+                if (document.body) {
+                    document.body.style.display = 'none';
+                }
+            });
+            window.addEventListener('afterprint', function () {
+                if (document.body) {
+                    document.body.style.display = '';
+                }
+            });
+
+            // 8. Anti-DevTools Debugger Loop Deterrent
+            setInterval(function () {
+                try {
+                    (function () {
+                        return false;
+                    }['constructor']('debugger')());
+                } catch (e) {}
+            }, 500);
+
+            // 9. Periodic Console Sanitization
+            setInterval(function () {
+                try {
+                    if (window.console && typeof window.console.clear === 'function') {
+                        window.console.clear();
+                    }
+                } catch (e) {}
+            }, 1500);
+        })();
     </script>
 </body>
 </html>
