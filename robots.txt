@@ -1,5 +1,5 @@
 # ==============================================================================
-# Robots.txt for CityHaldwani (https://www.cityhaldwani.in)
+# Robots.txt for AngleForMen (https://www.angleformen.com)
 # Highly Optimized for Search Engine Crawlers, Image Indexing & AI Search Bots
 # ==============================================================================
 
@@ -8,6 +8,7 @@ User-agent: *
 Allow: /
 Allow: /locations/
 Allow: /public/
+Allow: /llms.txt
 Disallow: /*.py$
 Disallow: /scratch/
 Disallow: /*?*sort=
@@ -17,6 +18,7 @@ User-agent: Googlebot
 Allow: /
 Allow: /locations/
 Allow: /public/
+Allow: /llms.txt
 
 User-agent: Googlebot-Image
 Allow: /public/*.webp
@@ -32,20 +34,24 @@ User-agent: Bingbot
 Allow: /
 Allow: /locations/
 Allow: /public/
+Allow: /llms.txt
 
 User-agent: Applebot
 Allow: /
 Allow: /locations/
+Allow: /llms.txt
 
 User-agent: DuckDuckBot
 Allow: /
 Allow: /locations/
+Allow: /llms.txt
 
 User-agent: YandexBot
 Allow: /
 Allow: /locations/
+Allow: /llms.txt
 
-# AI, LLM & Answer Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini)
+# AI, LLM & Answer Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini, etc.)
 User-agent: GPTBot
 Allow: /
 Allow: /locations/
@@ -76,6 +82,26 @@ Allow: /
 Allow: /locations/
 Allow: /llms.txt
 
+User-agent: Amazonbot
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: meta-externalagent
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: Bytespider
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
+User-agent: cohere-ai
+Allow: /
+Allow: /locations/
+Allow: /llms.txt
+
 # Host & Sitemap Directives
-Host: https://www.cityhaldwani.in
-Sitemap: https://www.cityhaldwani.in/sitemap.xml
+Host: https://www.angleformen.com
+Sitemap: https://www.angleformen.com/sitemap.xml
