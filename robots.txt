@@ -1,5 +1,5 @@
 # ==============================================================================
-# Robots.txt for AngleForMen (https://www.angleformen.com)
+# Robots.txt for AngelsForMen (https://www.angelsformen.com)
 # Highly Optimized for Search Engine Crawlers, Image Indexing & AI Search Bots
 # ==============================================================================
 
@@ -119,5 +119,5 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 
 # Host & Sitemap Directives
-Host: https://www.angleformen.com
-Sitemap: https://www.angleformen.com/sitemap.xml
+Host: https://www.angelsformen.com
+Sitemap: https://www.angelsformen.com/sitemap.xml
