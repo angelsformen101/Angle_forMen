@@ -1,104 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Homepage (Primary Hub - Dehradun Focus) -->
+  <!-- ============================================================== -->
+  <!-- 1. Homepage & Primary Destination Hub (Dehradun Dedicated)       -->
+  <!-- ============================================================== -->
   <url>
     <loc>https://www.angleformen.com/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>AngleForMen Dehradun Verified Escorts &amp; Call Girls</image:title>
+    </image:image>
   </url>
 
-  <!-- Primary Regional Location Directories (Uttarakhand) -->
+  <!-- ============================================================== -->
+  <!-- 2. Primary Regional City Directories (Uttarakhand, India)       -->
+  <!-- ============================================================== -->
   <url>
     <loc>https://www.angleformen.com/locations/dehradun.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>Dehradun Call Girls &amp; VIP Escort Service</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.angleformen.com/locations/haldwani.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>Haldwani Call Girls &amp; Gateway to Kumaon Escorts</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.angleformen.com/locations/mussoorie.html</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>Mussoorie Call Girls &amp; Queen of Hills Luxury Escorts</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.angleformen.com/locations/nainital.html</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>Nainital Call Girls &amp; Lake City Vacation Escorts</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.angleformen.com/locations/ramnagar.html</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>Ramnagar Jim Corbett Call Girls &amp; Wildlife Resort Escorts</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.angleformen.com/locations/rishikesh.html</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://www.angleformen.com/logo.png</image:loc>
+      <image:title>Rishikesh Call Girls &amp; Riverside Wellness Escorts</image:title>
+    </image:image>
   </url>
 
-  <!-- Key Company & Service Overview Pages -->
+  <!-- ============================================================== -->
+  <!-- 3. Key Brand, Company & Service Overview Pages                  -->
+  <!-- ============================================================== -->
   <url>
     <loc>https://www.angleformen.com/about.html</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.angleformen.com/services.html</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
-  <!-- Trust, Support & Safety Pages -->
+  <!-- ============================================================== -->
+  <!-- 4. Trust, Safety, Support & Abuse Reporting                     -->
+  <!-- ============================================================== -->
   <url>
     <loc>https://www.angleformen.com/Contact.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.angleformen.com/safety-guidelines.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://www.angleformen.com/report-abuse.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
-  <!-- Legal & Compliance Pages -->
+  <!-- ============================================================== -->
+  <!-- 5. Legal Terms, Compliance & Privacy Directives                 -->
+  <!-- ============================================================== -->
   <url>
     <loc>https://www.angleformen.com/terms.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://www.angleformen.com/privacy.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
 
-  <!-- Error & Redirection Page -->
+  <!-- ============================================================== -->
+  <!-- 6. Fallback & Navigation Error Route                            -->
+  <!-- ============================================================== -->
   <url>
     <loc>https://www.angleformen.com/404.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.30</priority>
   </url>

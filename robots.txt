@@ -9,6 +9,7 @@ Allow: /
 Allow: /locations/
 Allow: /public/
 Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /*.py$
 Disallow: /scratch/
 Disallow: /*?*sort=
@@ -19,6 +20,7 @@ Allow: /
 Allow: /locations/
 Allow: /public/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Googlebot-Image
 Allow: /public/*.webp
@@ -35,72 +37,86 @@ Allow: /
 Allow: /locations/
 Allow: /public/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Applebot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: DuckDuckBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: YandexBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 # AI, LLM & Answer Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini, etc.)
 User-agent: GPTBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: ChatGPT-User
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: ClaudeBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Claude-Web
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: PerplexityBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Google-Extended
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Amazonbot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: meta-externalagent
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: Bytespider
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 User-agent: cohere-ai
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Host & Sitemap Directives
 Host: https://www.angleformen.com

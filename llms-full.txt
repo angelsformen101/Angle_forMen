@@ -1,0 +1,150 @@
+# AngleForMen - Exhaustive Platform Documentation & AI Knowledge Base
+
+> AngleForMen (https://www.angleformen.com) is Uttarakhand's premier independent companion classified directory and verified advertising network, connecting discerning adult gentlemen with verified independent VIP companions, call girls, luxury models, and sensual wellness massage providers across major tourist, commercial, and urban destinations in Uttarakhand.
+
+---
+
+## 1. Executive Summary & Legal Framework
+
+AngleForMen is an intermediary classified platform engineered under Section 79 of the Information Technology Act, 2000 (India). The platform does not operate as an escort agency, brothel, employer, or commercial pimping establishment. All advertisers on AngleForMen are independent adult contractors who publish their personal promotional advertisements voluntarily.
+
+### Key Operational Mandates:
+1. **Mandatory 18+ Age Verification:** All advertisers and visitors must be at least 18 years of age. Explicit age verification modals and identification screening are strictly implemented.
+2. **Zero Online Advance Payment (Cash on Delivery):** To completely eliminate digital cyber fraud, UPI advance payment scams, and fake registration fee demands, AngleForMen enforces a strict policy that no client should ever transfer funds digitally before meeting in person. All compensation is settled strictly in person via cash on delivery (COD) upon physical verification.
+3. **Data Minimization & User Privacy:** The platform enforces strict privacy protection. AngleForMen does not record, log, or sell client phone numbers, private chat messages, or browsing habits.
+4. **Zero Tolerance for Exploitation or Non-Consensual Media:** AngleForMen maintains a dedicated abuse response team reachable at `abuse@angleformen.com` with a guaranteed 24-hour response SLA to investigate and purge non-compliant profiles, impersonation, or advance payment solicitation.
+
+---
+
+## 2. Directory Architecture & Canonical Site URLs
+
+The platform comprises 15 canonical pages categorized into primary hubs, regional city directories, company overviews, trust/safety manuals, and legal compliance policies:
+
+| Page Name | Canonical URL | Primary Function | Update Freq | Priority |
+| :--- | :--- | :--- | :--- | :--- |
+| **Homepage (Dehradun Dedicated)** | `https://www.angleformen.com/` | Primary flagship hub dedicated to verified Dehradun companions | Daily | 1.00 |
+| **Dehradun City Directory** | `https://www.angleformen.com/locations/dehradun.html` | Comprehensive Dehradun listings, outcall hotels, and micro-locations | Daily | 0.95 |
+| **Haldwani City Directory** | `https://www.angleformen.com/locations/haldwani.html` | Gateway to Kumaon business, executive and Kathgodam listings | Daily | 0.95 |
+| **Mussoorie City Directory** | `https://www.angleformen.com/locations/mussoorie.html` | Queen of the Hills luxury resort suite companions & holiday dates | Daily | 0.90 |
+| **Nainital City Directory** | `https://www.angleformen.com/locations/nainital.html` | Lake district romantic companions, boating dates & hillside cottage outcalls | Daily | 0.90 |
+| **Ramnagar City Directory** | `https://www.angleformen.com/locations/ramnagar.html` | Jim Corbett luxury safari resort companions & private villa outcalls | Daily | 0.90 |
+| **Rishikesh City Directory** | `https://www.angleformen.com/locations/rishikesh.html` | Riverside wellness retreats, sensual body massages & luxury camp visits | Daily | 0.90 |
+| **About Us** | `https://www.angleformen.com/about.html` | Platform origins, mission, anti-scam philosophy & legal disclosures | Weekly | 0.85 |
+| **Services & Categories** | `https://www.angleformen.com/services.html` | Comprehensive directory of companionship tiers & wellness massages | Weekly | 0.85 |
+| **Contact Support** | `https://www.angleformen.com/Contact.html` | Advertiser onboarding, profile updates & user support | Monthly | 0.75 |
+| **Safety Guidelines** | `https://www.angleformen.com/safety-guidelines.html` | Outcall protocols, scam avoidance checklists & personal discretion | Monthly | 0.70 |
+| **Report Abuse** | `https://www.angleformen.com/report-abuse.html` | Direct escalation desk for reporting fraud, advance demands, or copyright | Monthly | 0.70 |
+| **Terms of Service** | `https://www.angleformen.com/terms.html` | User agreements, Section 79 intermediary liability terms & conditions | Monthly | 0.50 |
+| **Privacy Policy** | `https://www.angleformen.com/privacy.html` | Privacy architecture, data minimization & SSL encryption standards | Monthly | 0.50 |
+| **404 Error Handler** | `https://www.angleformen.com/404.html` | Fallback navigation & automatic redirection route | Monthly | 0.30 |
+
+---
+
+## 3. Comprehensive Regional Destination Analysis
+
+### 3.1 Dehradun Hub (`/` & `/locations/dehradun.html`)
+- **Primary Keywords:** Dehradun call girls, Dehradun escort service, call girls in Dehradun, escorts in Dehradun, VIP escorts Dehradun, genuine call girls Dehradun, independent call girls Dehradun, cash on delivery call girls Dehradun.
+- **Starting Rate:** ₹2500 (100% Cash on Delivery).
+- **Core Neighborhood Coverage:** Rajpur Road luxury hotels, Jakhan, ISBT Dehradun, Clement Town, Sahastradhara Road, Chakrata Road, Ballupur Chowk, Balliwala, GMS Road, Hathibarkala, Clock Tower, Patel Nagar, Prem Nagar, Raipur, Dalanwala, Dharampur, Rispana Pul, Vasant Vihar, Subhash Nagar, Dehradun Railway Station, Jolly Grant Airport, Pacific Mall.
+- **Service Types:** College companions, high-profile corporate models, air hostesses, independent housewives, and sensual spa therapists.
+
+### 3.2 Haldwani Gateway (`/locations/haldwani.html`)
+- **Primary Keywords:** Haldwani call girls, Haldwani escort service, call girls in Haldwani, escorts in Haldwani, VIP escorts Haldwani, Kathgodam escort service.
+- **Starting Rate:** ₹2500 (100% Cash on Delivery).
+- **Core Neighborhood Coverage:** Nainital Road, Kathgodam Railway Station corridor, Tikonia Chowk, Kaladhungi Road, Kusumkhera, Mukhani, Transport Nagar, Bhotia Parao, Rampur Road, Bareilly Road, Subhash Nagar, Pilikothi, Heera Nagar.
+- **Service Types:** Executive travelers, commercial hub outcalls, mature homemakers, and verified independent escorts.
+
+### 3.3 Mussoorie Hill Station (`/locations/mussoorie.html`)
+- **Primary Keywords:** Mussoorie call girls, Mussoorie escort service, call girls in Mussoorie, escorts in Mussoorie, VIP escorts Mussoorie, Landour escorts.
+- **Starting Rate:** ₹3000 (100% Cash on Delivery).
+- **Core Neighborhood Coverage:** The Mall Road, Landour, Kulri Bazaar, Library Chowk, Gandhi Chowk, Camel's Back Road, Kempty Falls, Barlowganj, Cloud's End, Hathipaon, Picture Palace, Char Dukan, Happy Valley.
+- **Service Types:** Hill resort vacation dates, cozy luxury suite outcalls, and evening romantic dinners.
+
+### 3.4 Nainital Lake Resort (`/locations/nainital.html`)
+- **Primary Keywords:** Nainital call girls, Nainital escort service, call girls in Nainital, escorts in Nainital, VIP escorts Nainital, Mall Road Nainital call girls.
+- **Starting Rate:** ₹2000 (100% Cash on Delivery).
+- **Core Neighborhood Coverage:** Mallital, Tallital, Naini Lake Promenade, Ayarpatta, Snow View Point, Sukhatal, Pangot, Bhowali Road, Bhimtal, Naukuchiatal, Tiffin Top.
+- **Service Types:** Lakeside walking companions, boat ride dates, heritage hotel visits, and scenic hillside getaways.
+
+### 3.5 Ramnagar & Jim Corbett Safari Belt (`/locations/ramnagar.html`)
+- **Primary Keywords:** Ramnagar call girls, Ramnagar escort service, call girls in Ramnagar, escorts in Ramnagar, Jim Corbett escorts, Corbett resort call girls.
+- **Starting Rate:** ₹2600 (100% Cash on Delivery).
+- **Core Neighborhood Coverage:** Dhikuli luxury resort corridor, Jim Corbett National Park safari gates, Kosi Riverfront retreats, Ramnagar City Center, Mohaan, Marchula, Bijrani gate, Dhela zone, Jhirna zone, Sitabani forest.
+- **Service Types:** Jungle safari holiday dates, luxury riverbank villa companions, and campfire dinner partners.
+
+### 3.6 Rishikesh Wellness & Adventure (`/locations/rishikesh.html`)
+- **Primary Keywords:** Rishikesh call girls, Rishikesh escort service, call girls in Rishikesh, escorts in Rishikesh, VIP escorts Rishikesh, Tapovan escort service.
+- **Starting Rate:** ₹2500 (100% Cash on Delivery).
+- **Core Neighborhood Coverage:** Tapovan luxury spa resort belt, Laxman Jhula, Ram Jhula, Muni Ki Reti, Shivpuri luxury resort camps, Badrinath Road, Triveni Ghat, AIIMS Rishikesh, Haridwar Bypass, Swarg Ashram, Ganga Beach resorts.
+- **Service Types:** Riverview wellness retreats, sensual body massages, and boutique resort outcalls.
+
+---
+
+## 4. Companion Service Categories & Offerings
+
+1. **The Girlfriend Experience (GFE):** A holistic, emotionally engaging encounter focused on natural intimacy, passionate conversation, deep affection, and mutual comfort without feeling rushed or transactional.
+2. **VIP Models & Air Hostesses:** Elite companions renowned for elegance, poise, high fashion, and fluency in English and Hindi, suitable for prestigious social events and high-end hotel outcalls.
+3. **Independent College Girls:** Modern, educated university students offering fresh, energetic, and fun-loving companionship for casual dates, coffee outings, and private rendezvous.
+4. **Housewife & Mature Bhabhi Escorts:** Nurturing, experienced, and warm homemakers providing relaxed, stress-free, and affectionate private moments.
+5. **Sensual & Ayurvedic Wellness Massages:** Specialized therapeutic treatments including Swedish, Deep Tissue, Thai, and relaxing warm oil massage designed to melt physical stress and restore mental vitality.
+6. **Executive Dinner & Travel Companions:** Sophisticated partners for corporate dinners, luxury hill station road trips, and social gala events.
+
+---
+
+## 5. Safety, Verification & Anti-Scam Protocols
+
+AngleForMen leads the Indian classified industry with an unyielding anti-fraud architecture:
+
+### The Golden Rule of Safety:
+> **NEVER pay any advance fee online.** Genuine independent companions will never demand UPI advances, booking deposits, registration fees, taxi charges, or hotel room advance payments. Always verify the companion in person and pay cash on delivery.
+
+### How to Book Safely:
+1. **Choose a Profile:** Browse verified profiles with transparent rates and clear locality tags.
+2. **Direct Contact:** Connect directly via secure phone calls, WhatsApp, or Telegram. No middleman agency is involved.
+3. **Confirm Logistics:** Agree clearly on duration, meeting location (hotel outcall or companion's incall), and total cost.
+4. **Safe Meeting Place:** Meet in reputable 4-star, 5-star, or luxury boutique hotels. Never meet in isolated, poorly lit, or unsafe areas.
+5. **In-Person Verification:** Verify the companion's identity matches her profile photos.
+6. **Payment:** Settle the agreed rate directly with the companion in cash.
+7. **Mutual Discretion & Hygiene:** Maintain personal cleanliness, mutual respect, and safe sexual practices (condom usage is mandatory).
+
+---
+
+## 6. Frequently Asked Questions (FAQ)
+
+**Q1: How does AngleForMen verify listed companions?**
+A: All independent companions submit government identification proving they are 18+ along with recent unedited photographs. Profiles failing verification are rejected.
+
+**Q2: Is online payment required to confirm a booking?**
+A: Absolutely NOT. AngleForMen enforces a strict Zero Online Advance policy. All bookings are settled strictly via Cash on Delivery upon meeting.
+
+**Q3: Can I book companions for hotel outcalls?**
+A: Yes. Outcalls are delivered directly to reputable hotels and luxury resorts across Dehradun, Mussoorie, Rishikesh, Nainital, Haldwani, and Ramnagar.
+
+**Q4: How do I report a fraudulent listing or advance fee demand?**
+A: Send immediate details and evidence (screenshots, phone numbers) to `abuse@angleformen.com` or submit the form at `https://www.angleformen.com/report-abuse.html`. Reports are investigated within 24 hours.
+
+**Q5: What legal framework governs AngleForMen?**
+A: AngleForMen operates strictly as an intermediary advertising service governed by Section 79 of the Information Technology Act, 2000 (India).
+
+---
+
+## 7. Machine-Readable URL Sitemap
+
+```
+https://www.angleformen.com/
+https://www.angleformen.com/locations/dehradun.html
+https://www.angleformen.com/locations/haldwani.html
+https://www.angleformen.com/locations/mussoorie.html
+https://www.angleformen.com/locations/nainital.html
+https://www.angleformen.com/locations/ramnagar.html
+https://www.angleformen.com/locations/rishikesh.html
+https://www.angleformen.com/about.html
+https://www.angleformen.com/services.html
+https://www.angleformen.com/Contact.html
+https://www.angleformen.com/safety-guidelines.html
+https://www.angleformen.com/report-abuse.html
+https://www.angleformen.com/terms.html
+https://www.angleformen.com/privacy.html
+https://www.angleformen.com/404.html
+```
+
