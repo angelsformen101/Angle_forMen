@@ -118,6 +118,5 @@ Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
 
-# Host & Sitemap Directives
-Host: https://www.angelsformen.com
+# Sitemap Directives
 Sitemap: https://www.angelsformen.com/sitemap.xml
