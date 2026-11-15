@@ -25,7 +25,8 @@
     <meta property="og:locale" content="en_IN" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Privacy Policy & Discretion Standards | AngelsForMen" />
-    <meta property="og:description" content="AngelsForMen Privacy Policy. Understand our zero user tracking practices, minimal transient logs, secure encryption, and confidential user privacy standards." />
+    <meta property="og:description"
+        content="AngelsForMen Privacy Policy. Understand our zero user tracking practices, minimal transient logs, secure encryption, and confidential user privacy standards." />
     <meta property="og:url" content="https://www.angelsformen.com/privacy.html" />
     <meta property="og:site_name" content="AngelsForMen" />
     <meta property="og:image" content="https://www.angelsformen.com/logo.png" />
@@ -38,7 +39,8 @@
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Privacy Policy & Discretion Standards | AngelsForMen" />
-    <meta name="twitter:description" content="AngelsForMen Privacy Policy. Understand our zero user tracking practices, minimal transient logs, secure encryption, and confidential user privacy standards." />
+    <meta name="twitter:description"
+        content="AngelsForMen Privacy Policy. Understand our zero user tracking practices, minimal transient logs, secure encryption, and confidential user privacy standards." />
     <meta name="twitter:image" content="https://www.angelsformen.com/logo.png" />
 
     <!-- Mobile UI & Theme Color -->
@@ -106,24 +108,33 @@
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             font-size: 21px;
             font-weight: bold;
             color: #fff;
             letter-spacing: 0.5px;
             text-decoration: none;
             text-shadow: 0 0 12px rgba(255, 42, 109, 0.3);
+            transition: color 0.3s ease;
         }
 
         .logo:hover {
             text-decoration: none;
         }
 
+        .logo:hover .logo-img {
+            filter: drop-shadow(0 0 10px rgba(255, 42, 109, 0.7));
+            transform: scale(1.04);
+        }
+
         .logo-img {
-            height: 26px;
+            height: 44px;
             width: auto;
+            aspect-ratio: 1/1;
             object-fit: contain;
             display: block;
+            filter: drop-shadow(0 0 7px rgba(255, 42, 109, 0.45));
+            transition: transform 0.3s ease, filter 0.3s ease;
         }
 
         .logo span {
@@ -304,6 +315,15 @@
                 padding: 12px 20px;
             }
 
+            .logo {
+                font-size: 18px;
+                gap: 8px;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+
             .menu-toggle {
                 display: flex;
             }
@@ -346,7 +366,9 @@
     </style>
     <!-- Anti-Copy, Anti-Screenshot & Content Protection Styles -->
     <style id="page-protection-css">
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             -webkit-user-select: none !important;
             -moz-user-select: none !important;
             -ms-user-select: none !important;
@@ -355,19 +377,22 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        input, textarea {
+        input,
+        textarea {
             -webkit-user-select: text !important;
             -moz-user-select: text !important;
             -ms-user-select: text !important;
             user-select: text !important;
         }
 
-        img, video, picture {
+        img,
+        video,
+        picture {
             -webkit-user-drag: none !important;
             -khtml-user-drag: none !important;
             -moz-user-drag: none !important;
             -o-user-drag: none !important;
-            user-drag: none !important;
+            -user-drag: none !important;
             pointer-events: auto;
         }
 
@@ -379,7 +404,9 @@
         }
 
         @media print {
-            html, body {
+
+            html,
+            body {
                 display: none !important;
                 visibility: hidden !important;
                 opacity: 0 !important;
@@ -395,7 +422,7 @@
 
     <header>
         <a href="/" class="logo">
-            <img src="logo.png" alt="AngelsForMen" class="logo-img">
+            <img src="logo.png" alt="AngelsForMen" class="logo-img" width="44" height="44" fetchpriority="high">
             Angels<span>For</span>Men
         </a>
         <nav>
@@ -421,53 +448,87 @@
         </div>
 
         <section class="content-block">
-            <p>At <strong>AngelsForMen</strong>, absolute client discretion, user anonymity, and rigorous digital confidentiality represent the foundational bedrock of our operations. We understand that exploring mature companionship listings demands total peace of mind. This Privacy Policy details our operational data handling procedures, technical safeguards, and strict non-retention policies across our network.</p>
+            <p>At <strong>AngelsForMen</strong>, absolute client discretion, user anonymity, and rigorous digital
+                confidentiality represent the foundational bedrock of our operations. We understand that exploring
+                mature companionship listings demands total peace of mind. This Privacy Policy details our operational
+                data handling procedures, technical safeguards, and strict non-retention policies across our network.
+            </p>
 
             <div class="highlight-card">
-                <strong>OUR DISCRETION PLEDGE:</strong> You can browse AngelsForMen with complete anonymity. We do not require visitors to create consumer accounts, register user profiles, link personal social media accounts, or provide credit card data to explore our verified listings.
+                <strong>OUR DISCRETION PLEDGE:</strong> You can browse AngelsForMen with complete anonymity. We do not
+                require visitors to create consumer accounts, register user profiles, link personal social media
+                accounts, or provide credit card data to explore our verified listings.
             </div>
 
             <h2>1. Minimal Data Collection Architecture</h2>
-            <p>We adhere strictly to the principle of data minimization. The limited information processed by our servers falls into two transparent categories:</p>
+            <p>We adhere strictly to the principle of data minimization. The limited information processed by our
+                servers falls into two transparent categories:</p>
             <ul>
-                <li><strong>Anonymous Technical Telemetry:</strong> Standard non-identifying server log data (such as truncated IP addresses, user-agent device signatures, referral headers, and access timestamps) generated automatically to safeguard server uptime, prevent automated scraping spiders, and defend against malicious DDoS attacks. This telemetry is purged on a rolling basis.</li>
-                <li><strong>Voluntary Correspondence:</strong> Information you affirmatively provide when utilizing our Contact Support or Report Abuse portals (e.g., an email address and incident description). This information is utilized strictly to investigate inquiries and is never matched to browsing logs.</li>
-                <li><strong>Advertiser Profile Information:</strong> Information submitted voluntarily by independent advertisers for public display (companion alias, city, advertised rates, and authorized WhatsApp or telephone contact numbers).</li>
+                <li><strong>Anonymous Technical Telemetry:</strong> Standard non-identifying server log data (such as
+                    truncated IP addresses, user-agent device signatures, referral headers, and access timestamps)
+                    generated automatically to safeguard server uptime, prevent automated scraping spiders, and defend
+                    against malicious DDoS attacks. This telemetry is purged on a rolling basis.</li>
+                <li><strong>Voluntary Correspondence:</strong> Information you affirmatively provide when utilizing our
+                    Contact Support or Report Abuse portals (e.g., an email address and incident description). This
+                    information is utilized strictly to investigate inquiries and is never matched to browsing logs.
+                </li>
+                <li><strong>Advertiser Profile Information:</strong> Information submitted voluntarily by independent
+                    advertisers for public display (companion alias, city, advertised rates, and authorized WhatsApp or
+                    telephone contact numbers).</li>
             </ul>
 
             <h2>2. How We Handle & Safeguard User Data</h2>
             <p>The minimal technical data collected is used solely for legitimate platform management:</p>
             <ul>
-                <li>Ensuring responsive load times and optimal mobile viewing across iOS, Android, and desktop browsers.</li>
-                <li>Detecting and mitigating advance-payment fraud, duplicate scam submissions, and unauthorized automated bot attacks.</li>
-                <li>Verifying advertiser model consent documentation to ensure 100% compliance with adult publishing laws.</li>
+                <li>Ensuring responsive load times and optimal mobile viewing across iOS, Android, and desktop browsers.
+                </li>
+                <li>Detecting and mitigating advance-payment fraud, duplicate scam submissions, and unauthorized
+                    automated bot attacks.</li>
+                <li>Verifying advertiser model consent documentation to ensure 100% compliance with adult publishing
+                    laws.</li>
                 <li>Communicating with users who submit formal customer service or incident tickets.</li>
             </ul>
 
             <h2>3. Absolute Prohibition of Data Selling & Commercial Sharing</h2>
             <p>AngelsForMen operates with an unyielding <strong>NO DATA SALE POLICY</strong>:</p>
             <ul>
-                <li>We do NOT sell, rent, monetize, barter, or distribute your email address, IP history, or inquiries to advertising networks, lead aggregators, or marketing brokers.</li>
-                <li>We do NOT deploy intrusive cross-site behavioural tracking cookies or retargeting pixels (such as third-party commercial trackers) that compromise your discrete online lifestyle.</li>
-                <li>User data is disclosed only when strictly mandated by valid legal subpoena from an authoritative court of competent jurisdiction under applicable national digital privacy laws.</li>
+                <li>We do NOT sell, rent, monetize, barter, or distribute your email address, IP history, or inquiries
+                    to advertising networks, lead aggregators, or marketing brokers.</li>
+                <li>We do NOT deploy intrusive cross-site behavioural tracking cookies or retargeting pixels (such as
+                    third-party commercial trackers) that compromise your discrete online lifestyle.</li>
+                <li>User data is disclosed only when strictly mandated by valid legal subpoena from an authoritative
+                    court of competent jurisdiction under applicable national digital privacy laws.</li>
             </ul>
 
             <h2>4. Cookies & Client-Side Local Storage</h2>
             <p>Our website utilizes only essential, non-invasive client-side storage technologies:</p>
             <ul>
-                <li><strong>Age Verification Flag (<code>afm_age_consent</code>):</strong> A single session key stored within your local browser storage to remember that you have accepted our 18+ adult content agreement, preventing repetitive pop-ups during your browsing session.</li>
-                <li><strong>Search & Filter Cache:</strong> Lightweight temporary variables to retain your city filter preferences while you browse active profiles.</li>
-                <li>You maintain full authority to clear or disable cookies and site storage at any moment via your browser security settings without forfeiting the ability to view public listings.</li>
+                <li><strong>Age Verification Flag (<code>afm_age_consent</code>):</strong> A single session key stored
+                    within your local browser storage to remember that you have accepted our 18+ adult content
+                    agreement, preventing repetitive pop-ups during your browsing session.</li>
+                <li><strong>Search & Filter Cache:</strong> Lightweight temporary variables to retain your city filter
+                    preferences while you browse active profiles.</li>
+                <li>You maintain full authority to clear or disable cookies and site storage at any moment via your
+                    browser security settings without forfeiting the ability to view public listings.</li>
             </ul>
 
             <h2>5. End-to-End Encryption & Infrastructure Security</h2>
-            <p>All traffic between your browser and AngelsForMen is encrypted using industry-standard Transport Layer Security (TLS 1.3 / SSL 256-bit encryption). This prevents ISP eavesdropping, man-in-the-middle interceptions, and network snooping on public or private Wi-Fi connections.</p>
+            <p>All traffic between your browser and AngelsForMen is encrypted using industry-standard Transport Layer
+                Security (TLS 1.3 / SSL 256-bit encryption). This prevents ISP eavesdropping, man-in-the-middle
+                interceptions, and network snooping on public or private Wi-Fi connections.</p>
 
             <h2>6. Direct Peer-to-Peer Communication Notice</h2>
-            <p>When you click on an advertiser's WhatsApp or Call button, your communication transfers out of AngelsForMen directly to third-party telecommunication channels (such as WhatsApp or direct cellular telephony). We do not record, tap, monitor, or archive private conversations between clients and companions. Users are urged to practice personal discretion and adhere to our <a href="safety-guidelines.html">Safety Guidelines</a>.</p>
+            <p>When you click on an advertiser's WhatsApp or Call button, your communication transfers out of
+                AngelsForMen directly to third-party telecommunication channels (such as WhatsApp or direct cellular
+                telephony). We do not record, tap, monitor, or archive private conversations between clients and
+                companions. Users are urged to practice personal discretion and adhere to our <a
+                    href="safety-guidelines.html">Safety Guidelines</a>.</p>
 
             <h2>7. Privacy Inquiries & Data Removal Requests</h2>
-            <p>Under global data privacy frameworks, you retain the right to inquire about data handling or request the immediate deletion of any correspondence associated with your contact details. For all privacy inquiries, contact our Data Protection Officer directly at <a href="mailto:privacy@angelsformen.com">privacy@angelsformen.com</a>.</p>
+            <p>Under global data privacy frameworks, you retain the right to inquire about data handling or request the
+                immediate deletion of any correspondence associated with your contact details. For all privacy
+                inquiries, contact our Data Protection Officer directly at <a
+                    href="mailto:privacy@angelsformen.com">privacy@angelsformen.com</a>.</p>
         </section>
     </main>
 
@@ -563,8 +624,8 @@
 
                 // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (DevTools inspect/console)
                 if (ctrl && shift && (key === 'I' || key === 'i' || code === 73 ||
-                                      key === 'J' || key === 'j' || code === 74 ||
-                                      key === 'C' || key === 'c' || code === 67)) {
+                    key === 'J' || key === 'j' || code === 74 ||
+                    key === 'C' || key === 'c' || code === 67)) {
                     e.preventDefault();
                     e.stopPropagation();
                     return false;
@@ -608,7 +669,7 @@
                 // PrintScreen Key on Keydown
                 if (key === 'PrintScreen' || code === 44) {
                     if (navigator.clipboard && navigator.clipboard.writeText) {
-                        navigator.clipboard.writeText('').catch(function () {});
+                        navigator.clipboard.writeText('').catch(function () { });
                     }
                     if (document.body) {
                         document.body.classList.add('page-blur-shield');
@@ -629,7 +690,7 @@
                 var code = e.keyCode || e.which;
                 if (key === 'PrintScreen' || code === 44) {
                     if (navigator.clipboard && navigator.clipboard.writeText) {
-                        navigator.clipboard.writeText('').catch(function () {});
+                        navigator.clipboard.writeText('').catch(function () { });
                     }
                 }
             }, { capture: true });
@@ -678,7 +739,7 @@
                     (function () {
                         return false;
                     }['constructor']('debugger')());
-                } catch (e) {}
+                } catch (e) { }
             }, 500);
 
             // 9. Periodic Console Sanitization
@@ -687,7 +748,7 @@
                     if (window.console && typeof window.console.clear === 'function') {
                         window.console.clear();
                     }
-                } catch (e) {}
+                } catch (e) { }
             }, 1500);
         })();
     </script>

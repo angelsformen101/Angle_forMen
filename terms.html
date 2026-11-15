@@ -106,24 +106,33 @@
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             font-size: 21px;
             font-weight: bold;
             color: #fff;
             letter-spacing: 0.5px;
             text-decoration: none;
             text-shadow: 0 0 12px rgba(255, 42, 109, 0.3);
+            transition: color 0.3s ease;
         }
 
         .logo:hover {
             text-decoration: none;
         }
 
+        .logo:hover .logo-img {
+            filter: drop-shadow(0 0 10px rgba(255, 42, 109, 0.7));
+            transform: scale(1.04);
+        }
+
         .logo-img {
-            height: 26px;
+            height: 44px;
             width: auto;
+            aspect-ratio: 1/1;
             object-fit: contain;
             display: block;
+            filter: drop-shadow(0 0 7px rgba(255, 42, 109, 0.45));
+            transition: transform 0.3s ease, filter 0.3s ease;
         }
 
         .logo span {
@@ -304,6 +313,15 @@
                 padding: 12px 20px;
             }
 
+            .logo {
+                font-size: 18px;
+                gap: 8px;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+
             .menu-toggle {
                 display: flex;
             }
@@ -395,7 +413,7 @@
 
     <header>
         <a href="/" class="logo">
-            <img src="logo.png" alt="AngelsForMen" class="logo-img">
+            <img src="logo.png" alt="AngelsForMen" class="logo-img" width="44" height="44" fetchpriority="high">
             Angels<span>For</span>Men
         </a>
         <nav>
