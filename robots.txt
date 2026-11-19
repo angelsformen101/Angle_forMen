@@ -1,5 +1,5 @@
 # ==============================================================================
-# Robots.txt for AngelsForMen (https://www.angelsformen.com)
+# Robots.txt for AngelsForMen (https://angelsformen.com)
 # Highly Optimized for Search Engine Crawlers, Image Indexing & AI Search Bots
 # ==============================================================================
 
@@ -10,6 +10,9 @@ Allow: /locations/
 Allow: /public/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 Disallow: /*.py$
 Disallow: /scratch/
 Disallow: /*?*sort=
@@ -21,6 +24,9 @@ Allow: /locations/
 Allow: /public/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Googlebot-Image
 Allow: /public/*.webp
@@ -38,24 +44,36 @@ Allow: /locations/
 Allow: /public/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Applebot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: DuckDuckBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: YandexBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 # AI, LLM & Answer Engine Crawlers (ChatGPT, Claude, Perplexity, Gemini, etc.)
 User-agent: GPTBot
@@ -63,60 +81,90 @@ Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Claude-Web
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Amazonbot
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: meta-externalagent
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Bytespider
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: cohere-ai
 Allow: /
 Allow: /locations/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /admin!
+Disallow: /admin/
+Disallow: /api/
 
 # Sitemap Directives
-Sitemap: https://www.angelsformen.com/sitemap.xml
+Sitemap: https://angelsformen.com/sitemap.xml
