@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AngelsForMen | Management Desk</title>
-    <link rel="icon" type="image/png" href="../angels-logo.png">
+    <link rel="icon" type="image/png" href="/angels-logo.png">
     <script>
         (function() {
             // Strictly enforce secret route /admin! and hide actual file name
             if (window.location.protocol.startsWith('http')) {
                 var path = decodeURIComponent(window.location.pathname);
-                if (!path.endsWith('/admin!') && !path.endsWith('/admin!/')) {
+                if (!path.includes('admin!')) {
                     window.location.replace('/');
                     return;
                 }
@@ -21,7 +21,6 @@
         })();
     </script>
     <script src="/js/contacts-config.js"></script>
-    <script src="contacts-config.js"></script>
     <style>
         :root {
             --bg-dark: #08090d;
@@ -502,7 +501,7 @@
     <div id="login-overlay">
         <div class="login-card">
             <div class="login-logo">
-                <img src="../angels-logo.png" alt="AngelsForMen">
+                <img src="/angels-logo.png" alt="AngelsForMen">
                 Angels<span>For</span>Men
             </div>
             <p class="login-sub">Secure Control Panel &amp; Click Analytics Desk</p>
@@ -531,7 +530,7 @@
     <!-- MAIN DASHBOARD -->
     <header class="admin-nav">
         <div class="nav-brand">
-            <img src="../angels-logo.png" alt="AngelsForMen" width="36" height="36" style="border-radius:50%; border:1px solid #d4af37;">
+            <img src="/angels-logo.png" alt="AngelsForMen" width="36" height="36" style="border-radius:50%; border:1px solid #d4af37;">
             Angels<span>For</span>Men <span class="badge-admin">Admin v2.0</span>
         </div>
         <div class="nav-actions">
