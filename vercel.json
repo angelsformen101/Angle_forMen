@@ -3,12 +3,38 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/admin!", "destination": "/admin!.html" },
-    { "source": "/admin!/", "destination": "/admin!.html" }
+    {
+      "source": "/admin!",
+      "destination": "/admin!.html"
+    },
+    {
+      "source": "/admin!/",
+      "destination": "/admin!.html"
+    },
+    {
+      "source": "/post-ad",
+      "destination": "/post-ad.html"
+    },
+    {
+      "source": "/post-ad/",
+      "destination": "/post-ad.html"
+    }
   ],
   "redirects": [
-    { "source": "/admin", "destination": "/404", "statusCode": 404 },
-    { "source": "/admin/", "destination": "/404", "statusCode": 404 },
-    { "source": "/admin/(.*)", "destination": "/404", "statusCode": 404 }
+    {
+      "source": "/admin",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/admin/",
+      "destination": "/404",
+      "statusCode": 404
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": "/404",
+      "statusCode": 404
+    }
   ]
 }

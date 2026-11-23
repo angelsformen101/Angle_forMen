@@ -850,7 +850,73 @@
   }
 }
 
-</style>
+
+        /* Submitted Ads Styles */
+        .ad-thumb-img {
+            width: 52px;
+            height: 52px;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .ad-thumb-img:hover {
+            transform: scale(1.1);
+            border-color: var(--gold-primary);
+        }
+        .ad-no-thumb {
+            width: 52px;
+            height: 52px;
+            border-radius: 6px;
+            background: #151821;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            border: 1px dashed var(--border-color);
+        }
+        .ad-status-select {
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+        .status-pending { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.4); }
+        .status-approved { background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.4); }
+        .status-contacted { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); }
+        .status-rejected { background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.4); }
+        .btn-action-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-action-wa { background: #25D366; color: #fff !important; }
+        .btn-action-wa:hover { background: #20ba5a; }
+        .btn-action-call { background: var(--gold-gradient); color: #000 !important; }
+        .btn-action-call:hover { opacity: 0.9; }
+        .btn-action-del { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .btn-action-del:hover { background: #ef4444; color: #fff; }
+        .ad-desc-clamp {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            max-width: 320px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+    </style>
 </head>
 <body>
   <!-- 18+ Adult Content Moving Warning Bar -->
@@ -933,6 +999,10 @@
             <button class="tab-btn" data-tab="tab-analytics">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                 Click Analytics &amp; Duration Tracker
+            </button>
+                        <button class="tab-btn" data-tab="tab-ads">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                Submitted Ads (<span id="ad-count-badge">0</span>)
             </button>
             <button class="tab-btn" data-tab="tab-settings">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
@@ -1199,6 +1269,145 @@
         </div>
     </div>
 
+    
+        <!-- TAB 4: SUBMITTED ADS MANAGEMENT -->
+        <section id="tab-ads" class="tab-content">
+            <!-- Metrics Summary -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-title">Total Submitted Ads</div>
+                    <div class="metric-value" id="ad-stat-total">0</div>
+                    <div class="metric-sub" id="ad-stat-total-sub">All-time portal ads</div>
+                </div>
+                <div class="metric-card" style="border-top-color: #f59e0b;">
+                    <div class="metric-title">&#9203; Pending Review</div>
+                    <div class="metric-value" style="color: #f59e0b;" id="ad-stat-pending">0</div>
+                    <div class="metric-sub">Awaiting verification</div>
+                </div>
+                <div class="metric-card" style="border-top-color: #10b981;">
+                    <div class="metric-title">&#9989; Approved Ads</div>
+                    <div class="metric-value" style="color: #10b981;" id="ad-stat-approved">0</div>
+                    <div class="metric-sub">Active classifieds</div>
+                </div>
+                <div class="metric-card" style="border-top-color: #38bdf8;">
+                    <div class="metric-title">&#128172; Contacted</div>
+                    <div class="metric-value" style="color: #38bdf8;" id="ad-stat-contacted">0</div>
+                    <div class="metric-sub">Reached on WhatsApp/Call</div>
+                </div>
+            </div>
+
+            <!-- Ads Management Table Card -->
+            <div class="dash-card">
+                <div class="card-title-row">
+                    <div>
+                        <h2>&#128227; Submitted Classified Advertisements</h2>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">
+                            Review, verify, and contact advertisers who posted via <code>/post-ad</code>. Stored securely online without a database.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button id="btn-refresh-ads" class="btn-outline">&#128260; Refresh</button>
+                        <button id="btn-import-ad" class="btn-outline">&#128229; Import Ad</button>
+                        <button id="btn-export-ads-csv" class="btn-gold">&#128229; Export CSV</button>
+                        <button id="btn-export-ads-json" class="btn-outline">&#128229; Export JSON</button>
+                        <button id="btn-clear-all-ads" class="btn-danger-outline">&#128465; Clear All</button>
+                    </div>
+                </div>
+
+                <!-- Filters & Search Toolbar -->
+                <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; background: rgba(0,0,0,0.25); padding: 14px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <div style="flex: 1; min-width: 220px;">
+                        <input type="text" id="ad-search-input" class="form-control" placeholder="Search by name, phone, ad ID, city..." style="font-size: 0.9rem; padding: 8px 12px;">
+                    </div>
+                    <div style="width: 170px;">
+                        <select id="ad-filter-status" class="form-control" style="font-size: 0.9rem; padding: 8px 12px;">
+                            <option value="ALL">All Statuses</option>
+                            <option value="Pending Review">Pending Review</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Contacted">Contacted</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div style="width: 170px;">
+                        <select id="ad-filter-city" class="form-control" style="font-size: 0.9rem; padding: 8px 12px;">
+                            <option value="ALL">All Cities</option>
+                            <option value="Dehradun">Dehradun</option>
+                            <option value="Mussoorie">Mussoorie</option>
+                            <option value="Rishikesh">Rishikesh</option>
+                            <option value="Nainital">Nainital</option>
+                            <option value="Haldwani">Haldwani</option>
+                            <option value="Ramnagar">Ramnagar</option>
+                            <option value="Haridwar">Haridwar</option>
+                            <option value="Roorkee">Roorkee</option>
+                        </select>
+                    </div>
+                    <button id="btn-add-sample-ad" class="btn-outline" style="font-size: 0.85rem; padding: 8px 12px;" title="Generate a demo ad to test functionality">+ Add Demo Ad</button>
+                </div>
+
+                <!-- Ads Table -->
+                <div class="table-responsive">
+                    <table class="data-table" id="ads-data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 70px;">Photo</th>
+                                <th style="width: 110px;">Ad ID / Date</th>
+                                <th style="width: 150px;">Advertiser</th>
+                                <th style="width: 140px;">Location / Role</th>
+                                <th style="width: 130px;">Rates (₹)</th>
+                                <th>Ad Details</th>
+                                <th style="width: 130px;">Status</th>
+                                <th style="width: 160px;">Direct Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ads-tbody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Empty State -->
+                <div id="ads-empty-state" style="display: none; text-align: center; padding: 40px 20px; color: var(--text-muted);">
+                    <div style="font-size: 2.8rem; margin-bottom: 12px;">📢</div>
+                    <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 6px;">No Advertisements Found</h3>
+                    <p style="font-size: 0.9rem; max-width: 500px; margin: 0 auto 16px;">
+                        When companions or advertisers post their ads on <code>/post-ad</code>, they will appear here in real time.
+                    </p>
+                    <a href="/post-ad" target="_blank" class="btn-gold" style="display: inline-block;">Open Post Ad Page &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Zoom Lightbox Modal -->
+        <div id="modal-ad-photo-zoom" class="admin-modal-overlay" style="display: none;">
+            <div class="admin-modal-card" style="max-width: 550px; text-align: center; padding: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                    <h3 id="zoom-photo-title" style="color: #fff; font-size: 1.1rem; margin: 0;">Advertiser Photo</h3>
+                    <button type="button" class="btn-outline" onclick="closePhotoZoomModal()" style="padding: 4px 10px; font-size: 1.1rem; cursor: pointer;">&times;</button>
+                </div>
+                <img id="zoom-photo-img" src="" alt="Zoomed Photo" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border-color);">
+            </div>
+        </div>
+
+        <!-- Import Ad Payload Modal -->
+        <div id="modal-import-ad" class="admin-modal-overlay" style="display: none;">
+            <div class="admin-modal-card" style="max-width: 550px;">
+                <div class="modal-header">
+                    <h3>&#128229; Import Ad From WhatsApp / JSON</h3>
+                    <button type="button" class="btn-outline" onclick="closeImportAdModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+                        Paste the Ad text or JSON payload shared by the advertiser on WhatsApp to instantly save it into the dashboard:
+                    </p>
+                    <textarea id="import-ad-textarea" class="form-control" style="min-height: 140px; font-family: monospace; font-size: 0.85rem;" placeholder="Paste Ad Reference message or raw JSON here..."></textarea>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;">
+                    <button type="button" class="btn-outline" onclick="closeImportAdModal()">Cancel</button>
+                    <button type="button" class="btn-gold" id="btn-do-import-ad">Import &amp; Save</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script>
@@ -1400,7 +1609,380 @@
             sessionStorage.removeItem(STORAGE_KEY_LOGGED_IN);
             sessionStorage.removeItem(STORAGE_KEY_SESSION_ID);
             sessionStorage.removeItem(STORAGE_KEY_LAST_ACTIVITY);
-            checkAuth();
+            
+        /* ==========================================================================
+           SUBMITTED ADS MANAGEMENT (Online LocalStorage without database)
+           ========================================================================== */
+        const STORAGE_KEY_ADS = 'afm_submitted_ads';
+        let currentAdsList = [];
+
+        function loadSubmittedAds() {
+            try {
+                const stored = localStorage.getItem(STORAGE_KEY_ADS);
+                currentAdsList = stored ? JSON.parse(stored) : [];
+            } catch (e) {
+                console.error('Error parsing ads storage', e);
+                currentAdsList = [];
+            }
+
+            updateAdsBadgeAndStats();
+            renderAdsTable();
+        }
+
+        function updateAdsBadgeAndStats() {
+            const badge = document.getElementById('ad-count-badge');
+            if (badge) badge.textContent = currentAdsList.length;
+
+            const statTotal = document.getElementById('ad-stat-total');
+            if (statTotal) statTotal.textContent = currentAdsList.length;
+
+            const pendingCount = currentAdsList.filter(a => a.status === 'Pending Review' || !a.status).length;
+            const approvedCount = currentAdsList.filter(a => a.status === 'Approved').length;
+            const contactedCount = currentAdsList.filter(a => a.status === 'Contacted').length;
+
+            const elPending = document.getElementById('ad-stat-pending');
+            if (elPending) elPending.textContent = pendingCount;
+            const elApproved = document.getElementById('ad-stat-approved');
+            if (elApproved) elApproved.textContent = approvedCount;
+            const elContacted = document.getElementById('ad-stat-contacted');
+            if (elContacted) elContacted.textContent = contactedCount;
+        }
+
+        function renderAdsTable() {
+            const tbody = document.getElementById('ads-tbody');
+            const emptyState = document.getElementById('ads-empty-state');
+            const table = document.getElementById('ads-data-table');
+            if (!tbody) return;
+
+            const searchTerm = (document.getElementById('ad-search-input')?.value || '').toLowerCase().trim();
+            const filterStatus = document.getElementById('ad-filter-status')?.value || 'ALL';
+            const filterCity = document.getElementById('ad-filter-city')?.value || 'ALL';
+
+            const filtered = currentAdsList.filter(ad => {
+                const matchesStatus = filterStatus === 'ALL' || ad.status === filterStatus || (!ad.status && filterStatus === 'Pending Review');
+                const matchesCity = filterCity === 'ALL' || (ad.city && ad.city.toLowerCase() === filterCity.toLowerCase());
+                const matchesSearch = !searchTerm || 
+                    (ad.name && ad.name.toLowerCase().includes(searchTerm)) ||
+                    (ad.phone && ad.phone.includes(searchTerm)) ||
+                    (ad.id && ad.id.toLowerCase().includes(searchTerm)) ||
+                    (ad.title && ad.title.toLowerCase().includes(searchTerm)) ||
+                    (ad.city && ad.city.toLowerCase().includes(searchTerm));
+                return matchesStatus && matchesCity && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                table.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            table.style.display = 'table';
+            emptyState.style.display = 'none';
+
+            tbody.innerHTML = filtered.map((ad, idx) => {
+                const photoHtml = ad.photo ? 
+                    `<img src="${ad.photo}" class="ad-thumb-img" alt="${escapeHtml(ad.name)}" onclick="openPhotoZoomModal('${ad.photo}', '${escapeHtml(ad.name)}')">` :
+                    `<div class="ad-no-thumb">👤</div>`;
+
+                const cleanPhone = (ad.phone || '').replace(/\D/g, '');
+                const cleanWA = (ad.whatsapp || ad.phone || '').replace(/\D/g, '');
+                const rates = ad.rates || {};
+                const rateText = `1hr: ₹${rates.oneHour || '3k'}<br>Night: ₹${rates.fullNight || '10k'}`;
+
+                const statusClass = 
+                    ad.status === 'Approved' ? 'status-approved' :
+                    ad.status === 'Contacted' ? 'status-contacted' :
+                    ad.status === 'Rejected' ? 'status-rejected' : 'status-pending';
+
+                const waGreeting = encodeURIComponent(`Hi ${ad.name || 'there'}, regarding your Ad ID ${ad.id} on AngelsForMen...`);
+
+                return `
+                    <tr>
+                        <td>${photoHtml}</td>
+                        <td>
+                            <strong style="color: var(--gold-primary); font-size: 0.88rem;">${escapeHtml(ad.id || 'AFM-000')}</strong>
+                            <div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 3px;">${escapeHtml(ad.submittedAt || '')}</div>
+                        </td>
+                        <td>
+                            <strong style="color: #fff; font-size: 0.92rem;">${escapeHtml(ad.name || 'Anonymous')}</strong>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">${ad.age ? ad.age + ' yrs' : ''} &bull; ${escapeHtml(ad.gender || 'Female')}</div>
+                            <div style="font-size: 0.8rem; color: var(--gold-primary); margin-top: 2px;">📞 ${cleanPhone}</div>
+                        </td>
+                        <td>
+                            <span class="badge" style="background: rgba(212,175,55,0.15); color: var(--gold-primary); font-size: 0.75rem;">${escapeHtml(ad.city || 'Uttarakhand')}</span>
+                            <div style="font-size: 0.8rem; color: #e2e8f0; margin-top: 4px;">${escapeHtml(ad.category || 'VIP Escort')}</div>
+                        </td>
+                        <td style="font-size: 0.82rem; color: #cbd5e1;">${rateText}</td>
+                        <td>
+                            <strong style="color: #fff; font-size: 0.88rem;">${escapeHtml(ad.title || '')}</strong>
+                            <div class="ad-desc-clamp" title="${escapeHtml(ad.description || '')}">${escapeHtml(ad.description || '')}</div>
+                        </td>
+                        <td>
+                            <select class="ad-status-select ${statusClass}" onchange="changeAdStatus('${ad.id}', this.value)">
+                                <option value="Pending Review" ${ad.status === 'Pending Review' || !ad.status ? 'selected' : ''}>⏳ Pending</option>
+                                <option value="Approved" ${ad.status === 'Approved' ? 'selected' : ''}>✅ Approved</option>
+                                <option value="Contacted" ${ad.status === 'Contacted' ? 'selected' : ''}>💬 Contacted</option>
+                                <option value="Rejected" ${ad.status === 'Rejected' ? 'selected' : ''}>❌ Rejected</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                <a href="https://wa.me/91${cleanWA}?text=${waGreeting}" target="_blank" class="btn-action-icon btn-action-wa" title="WhatsApp Advertiser">
+                                    <span>💬 WA</span>
+                                </a>
+                                <a href="tel:${cleanPhone}" class="btn-action-icon btn-action-call" title="Call Advertiser">
+                                    <span>📞 Call</span>
+                                </a>
+                                <button type="button" class="btn-action-icon btn-action-del" onclick="deleteAd('${ad.id}')" title="Delete Ad">
+                                    <span>🗑️</span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        window.openPhotoZoomModal = function(src, name) {
+            const modal = document.getElementById('modal-ad-photo-zoom');
+            const img = document.getElementById('zoom-photo-img');
+            const title = document.getElementById('zoom-photo-title');
+            if (modal && img) {
+                img.src = src;
+                title.textContent = name ? name + ' - Profile Photo' : 'Profile Photo';
+                modal.style.display = 'flex';
+            }
+        };
+
+        window.closePhotoZoomModal = function() {
+            const modal = document.getElementById('modal-ad-photo-zoom');
+            if (modal) modal.style.display = 'none';
+        };
+
+        window.closeImportAdModal = function() {
+            const modal = document.getElementById('modal-import-ad');
+            if (modal) modal.style.display = 'none';
+        };
+
+        window.changeAdStatus = function(adId, newStatus) {
+            const ad = currentAdsList.find(a => a.id === adId);
+            if (ad) {
+                ad.status = newStatus;
+                saveAdsToStorage();
+                notify(`Ad ${adId} status updated to ${newStatus}`);
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+            }
+        };
+
+        window.deleteAd = function(adId) {
+            if (confirm(`Are you sure you want to permanently delete ad ${adId}?`)) {
+                currentAdsList = currentAdsList.filter(a => a.id !== adId);
+                saveAdsToStorage();
+                notify(`Ad ${adId} deleted.`);
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+            }
+        };
+
+        function saveAdsToStorage() {
+            try {
+                localStorage.setItem(STORAGE_KEY_ADS, JSON.stringify(currentAdsList));
+                localStorage.setItem('afm_ads_last_updated', Date.now().toString());
+            } catch (e) {
+                console.error('Error saving ads to storage', e);
+                notify('Warning: Storage error while saving ads', true);
+            }
+        }
+
+        // Export CSV
+        document.getElementById('btn-export-ads-csv')?.addEventListener('click', function() {
+            if (currentAdsList.length === 0) {
+                notify('No ads to export!', true);
+                return;
+            }
+            const headers = ['ID', 'SubmittedAt', 'Status', 'Name', 'Age', 'Gender', 'Phone', 'WhatsApp', 'City', 'Category', '1HrRate', 'NightRate', 'Title', 'Description'];
+            const rows = currentAdsList.map(a => [
+                a.id || '',
+                a.submittedAt || '',
+                a.status || 'Pending Review',
+                `"${(a.name || '').replace(/"/g, '""')}"`,
+                a.age || '',
+                a.gender || '',
+                a.phone || '',
+                a.whatsapp || '',
+                `"${(a.city || '').replace(/"/g, '""')}"`,
+                `"${(a.category || '').replace(/"/g, '""')}"`,
+                a.rates?.oneHour || '',
+                a.rates?.fullNight || '',
+                `"${(a.title || '').replace(/"/g, '""')}"`,
+                `"${(a.description || '').replace(/"/g, '""')}"`
+            ]);
+
+            const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `AngelsForMen_Submitted_Ads_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+            notify('Ads CSV exported successfully!');
+        });
+
+        // Export JSON
+        document.getElementById('btn-export-ads-json')?.addEventListener('click', function() {
+            if (currentAdsList.length === 0) {
+                notify('No ads to export!', true);
+                return;
+            }
+            const jsonStr = JSON.stringify(currentAdsList, null, 2);
+            const blob = new Blob([jsonStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `AngelsForMen_Submitted_Ads_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            notify('Ads JSON exported successfully!');
+        });
+
+        // Clear All Ads
+        document.getElementById('btn-clear-all-ads')?.addEventListener('click', function() {
+            if (currentAdsList.length === 0) return;
+            if (confirm('Warning: Are you sure you want to delete ALL submitted ads? This action cannot be undone.')) {
+                currentAdsList = [];
+                saveAdsToStorage();
+                notify('All submitted ads cleared!');
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+            }
+        });
+
+        // Add Demo Sample Ad for testing
+        document.getElementById('btn-add-sample-ad')?.addEventListener('click', function() {
+            const demoId = 'AFM-' + Math.floor(10000 + Math.random() * 90000);
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + 
+                            now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+            
+            const demoAd = {
+                id: demoId,
+                name: 'Simran Roy',
+                age: 22,
+                gender: 'Female',
+                phone: '9876543210',
+                whatsapp: '9876543210',
+                city: 'Dehradun',
+                category: 'VIP High-Class Escort',
+                availability: '24/7 Round the Clock',
+                meeting: 'Hotel & Resort Outcall',
+                rates: { oneHour: '4,000', twoHours: '7,000', fullNight: '14,000' },
+                title: 'Genuine 22yo Gorgeous VIP Model in Dehradun - In-Room Luxury Cash-on-Meeting',
+                description: 'Polite, educated, and discreet VIP companion offering sweet romance, candlelight dinner dates, and executive outcall to premier 5-star hotels.',
+                photo: '',
+                submittedAt: dateStr,
+                timestamp: Date.now(),
+                status: 'Pending Review',
+                notes: 'Demo test advertisement'
+            };
+
+            currentAdsList.unshift(demoAd);
+            saveAdsToStorage();
+            notify(`Demo ad ${demoId} added successfully!`);
+            updateAdsBadgeAndStats();
+            renderAdsTable();
+        });
+
+        // Refresh Button
+        document.getElementById('btn-refresh-ads')?.addEventListener('click', function() {
+            loadSubmittedAds();
+            notify('Submitted ads refreshed!');
+        });
+
+        // Search & Filter event listeners
+        document.getElementById('ad-search-input')?.addEventListener('input', renderAdsTable);
+        document.getElementById('ad-filter-status')?.addEventListener('change', renderAdsTable);
+        document.getElementById('ad-filter-city')?.addEventListener('change', renderAdsTable);
+
+        // Import Ad Modal Open
+        document.getElementById('btn-import-ad')?.addEventListener('click', function() {
+            const modal = document.getElementById('modal-import-ad');
+            if (modal) modal.style.display = 'flex';
+        });
+
+        // Import Ad Action
+        document.getElementById('btn-do-import-ad')?.addEventListener('click', function() {
+            const text = (document.getElementById('import-ad-textarea')?.value || '').trim();
+            if (!text) {
+                alert('Please paste ad text or JSON payload.');
+                return;
+            }
+
+            try {
+                // Try parsing as JSON first
+                if (text.startsWith('{') || text.startsWith('[')) {
+                    const parsed = JSON.parse(text);
+                    if (Array.isArray(parsed)) {
+                        currentAdsList = [...parsed, ...currentAdsList];
+                    } else if (parsed.id || parsed.name) {
+                        currentAdsList.unshift(parsed);
+                    }
+                } else {
+                    // Parse text message format
+                    const adId = (text.match(/Ad Reference ID:\s*([A-Z0-9-]+)/i) || [])[1] || ('AFM-' + Math.floor(10000 + Math.random() * 90000));
+                    const name = (text.match(/Name:\s*([^(
+]+)/i) || [])[1]?.trim() || 'WhatsApp Advertiser';
+                    const city = (text.match(/City:\s*([^
+]+)/i) || [])[1]?.trim() || 'Dehradun';
+                    const phone = (text.match(/Phone:\s*([^
+]+)/i) || [])[1]?.trim() || '9876543210';
+                    const category = (text.match(/Category:\s*([^
+]+)/i) || [])[1]?.trim() || 'VIP Escort';
+
+                    const newAd = {
+                        id: adId,
+                        name: name,
+                        age: 23,
+                        gender: 'Female',
+                        phone: phone,
+                        whatsapp: phone,
+                        city: city,
+                        category: category,
+                        availability: '24/7 Round the Clock',
+                        meeting: 'Hotel & Resort Outcall',
+                        rates: { oneHour: '3,500', twoHours: '6,000', fullNight: '12,000' },
+                        title: `${name} - Verified ${category} in ${city}`,
+                        description: text,
+                        photo: '',
+                        submittedAt: new Date().toLocaleDateString('en-IN') + ' ' + new Date().toLocaleTimeString('en-IN', {hour: '2-digit', minute:'2-digit'}),
+                        timestamp: Date.now(),
+                        status: 'Pending Review',
+                        notes: 'Imported via WhatsApp text'
+                    };
+                    currentAdsList.unshift(newAd);
+                }
+
+                saveAdsToStorage();
+                notify('Advertisement imported successfully!');
+                closeImportAdModal();
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+                document.getElementById('import-ad-textarea').value = '';
+            } catch (err) {
+                alert('Could not parse advertisement: ' + err.message);
+            }
+        });
+
+        // Listen for storage events (updates from other tabs)
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY_ADS || e.key === 'afm_ads_last_updated') {
+                loadSubmittedAds();
+            }
+        });
+
+        checkAuth();
         });
 
         // Tabs
@@ -1953,6 +2535,379 @@
         });
 
         // Init
+        
+        /* ==========================================================================
+           SUBMITTED ADS MANAGEMENT (Online LocalStorage without database)
+           ========================================================================== */
+        const STORAGE_KEY_ADS = 'afm_submitted_ads';
+        let currentAdsList = [];
+
+        function loadSubmittedAds() {
+            try {
+                const stored = localStorage.getItem(STORAGE_KEY_ADS);
+                currentAdsList = stored ? JSON.parse(stored) : [];
+            } catch (e) {
+                console.error('Error parsing ads storage', e);
+                currentAdsList = [];
+            }
+
+            updateAdsBadgeAndStats();
+            renderAdsTable();
+        }
+
+        function updateAdsBadgeAndStats() {
+            const badge = document.getElementById('ad-count-badge');
+            if (badge) badge.textContent = currentAdsList.length;
+
+            const statTotal = document.getElementById('ad-stat-total');
+            if (statTotal) statTotal.textContent = currentAdsList.length;
+
+            const pendingCount = currentAdsList.filter(a => a.status === 'Pending Review' || !a.status).length;
+            const approvedCount = currentAdsList.filter(a => a.status === 'Approved').length;
+            const contactedCount = currentAdsList.filter(a => a.status === 'Contacted').length;
+
+            const elPending = document.getElementById('ad-stat-pending');
+            if (elPending) elPending.textContent = pendingCount;
+            const elApproved = document.getElementById('ad-stat-approved');
+            if (elApproved) elApproved.textContent = approvedCount;
+            const elContacted = document.getElementById('ad-stat-contacted');
+            if (elContacted) elContacted.textContent = contactedCount;
+        }
+
+        function renderAdsTable() {
+            const tbody = document.getElementById('ads-tbody');
+            const emptyState = document.getElementById('ads-empty-state');
+            const table = document.getElementById('ads-data-table');
+            if (!tbody) return;
+
+            const searchTerm = (document.getElementById('ad-search-input')?.value || '').toLowerCase().trim();
+            const filterStatus = document.getElementById('ad-filter-status')?.value || 'ALL';
+            const filterCity = document.getElementById('ad-filter-city')?.value || 'ALL';
+
+            const filtered = currentAdsList.filter(ad => {
+                const matchesStatus = filterStatus === 'ALL' || ad.status === filterStatus || (!ad.status && filterStatus === 'Pending Review');
+                const matchesCity = filterCity === 'ALL' || (ad.city && ad.city.toLowerCase() === filterCity.toLowerCase());
+                const matchesSearch = !searchTerm || 
+                    (ad.name && ad.name.toLowerCase().includes(searchTerm)) ||
+                    (ad.phone && ad.phone.includes(searchTerm)) ||
+                    (ad.id && ad.id.toLowerCase().includes(searchTerm)) ||
+                    (ad.title && ad.title.toLowerCase().includes(searchTerm)) ||
+                    (ad.city && ad.city.toLowerCase().includes(searchTerm));
+                return matchesStatus && matchesCity && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '';
+                table.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            table.style.display = 'table';
+            emptyState.style.display = 'none';
+
+            tbody.innerHTML = filtered.map((ad, idx) => {
+                const photoHtml = ad.photo ? 
+                    `<img src="${ad.photo}" class="ad-thumb-img" alt="${escapeHtml(ad.name)}" onclick="openPhotoZoomModal('${ad.photo}', '${escapeHtml(ad.name)}')">` :
+                    `<div class="ad-no-thumb">👤</div>`;
+
+                const cleanPhone = (ad.phone || '').replace(/\D/g, '');
+                const cleanWA = (ad.whatsapp || ad.phone || '').replace(/\D/g, '');
+                const rates = ad.rates || {};
+                const rateText = `1hr: ₹${rates.oneHour || '3k'}<br>Night: ₹${rates.fullNight || '10k'}`;
+
+                const statusClass = 
+                    ad.status === 'Approved' ? 'status-approved' :
+                    ad.status === 'Contacted' ? 'status-contacted' :
+                    ad.status === 'Rejected' ? 'status-rejected' : 'status-pending';
+
+                const waGreeting = encodeURIComponent(`Hi ${ad.name || 'there'}, regarding your Ad ID ${ad.id} on AngelsForMen...`);
+
+                return `
+                    <tr>
+                        <td>${photoHtml}</td>
+                        <td>
+                            <strong style="color: var(--gold-primary); font-size: 0.88rem;">${escapeHtml(ad.id || 'AFM-000')}</strong>
+                            <div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 3px;">${escapeHtml(ad.submittedAt || '')}</div>
+                        </td>
+                        <td>
+                            <strong style="color: #fff; font-size: 0.92rem;">${escapeHtml(ad.name || 'Anonymous')}</strong>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">${ad.age ? ad.age + ' yrs' : ''} &bull; ${escapeHtml(ad.gender || 'Female')}</div>
+                            <div style="font-size: 0.8rem; color: var(--gold-primary); margin-top: 2px;">📞 ${cleanPhone}</div>
+                        </td>
+                        <td>
+                            <span class="badge" style="background: rgba(212,175,55,0.15); color: var(--gold-primary); font-size: 0.75rem;">${escapeHtml(ad.city || 'Uttarakhand')}</span>
+                            <div style="font-size: 0.8rem; color: #e2e8f0; margin-top: 4px;">${escapeHtml(ad.category || 'VIP Escort')}</div>
+                        </td>
+                        <td style="font-size: 0.82rem; color: #cbd5e1;">${rateText}</td>
+                        <td>
+                            <strong style="color: #fff; font-size: 0.88rem;">${escapeHtml(ad.title || '')}</strong>
+                            <div class="ad-desc-clamp" title="${escapeHtml(ad.description || '')}">${escapeHtml(ad.description || '')}</div>
+                        </td>
+                        <td>
+                            <select class="ad-status-select ${statusClass}" onchange="changeAdStatus('${ad.id}', this.value)">
+                                <option value="Pending Review" ${ad.status === 'Pending Review' || !ad.status ? 'selected' : ''}>⏳ Pending</option>
+                                <option value="Approved" ${ad.status === 'Approved' ? 'selected' : ''}>✅ Approved</option>
+                                <option value="Contacted" ${ad.status === 'Contacted' ? 'selected' : ''}>💬 Contacted</option>
+                                <option value="Rejected" ${ad.status === 'Rejected' ? 'selected' : ''}>❌ Rejected</option>
+                            </select>
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                <a href="https://wa.me/91${cleanWA}?text=${waGreeting}" target="_blank" class="btn-action-icon btn-action-wa" title="WhatsApp Advertiser">
+                                    <span>💬 WA</span>
+                                </a>
+                                <a href="tel:${cleanPhone}" class="btn-action-icon btn-action-call" title="Call Advertiser">
+                                    <span>📞 Call</span>
+                                </a>
+                                <button type="button" class="btn-action-icon btn-action-del" onclick="deleteAd('${ad.id}')" title="Delete Ad">
+                                    <span>🗑️</span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        window.openPhotoZoomModal = function(src, name) {
+            const modal = document.getElementById('modal-ad-photo-zoom');
+            const img = document.getElementById('zoom-photo-img');
+            const title = document.getElementById('zoom-photo-title');
+            if (modal && img) {
+                img.src = src;
+                title.textContent = name ? name + ' - Profile Photo' : 'Profile Photo';
+                modal.style.display = 'flex';
+            }
+        };
+
+        window.closePhotoZoomModal = function() {
+            const modal = document.getElementById('modal-ad-photo-zoom');
+            if (modal) modal.style.display = 'none';
+        };
+
+        window.closeImportAdModal = function() {
+            const modal = document.getElementById('modal-import-ad');
+            if (modal) modal.style.display = 'none';
+        };
+
+        window.changeAdStatus = function(adId, newStatus) {
+            const ad = currentAdsList.find(a => a.id === adId);
+            if (ad) {
+                ad.status = newStatus;
+                saveAdsToStorage();
+                notify(`Ad ${adId} status updated to ${newStatus}`);
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+            }
+        };
+
+        window.deleteAd = function(adId) {
+            if (confirm(`Are you sure you want to permanently delete ad ${adId}?`)) {
+                currentAdsList = currentAdsList.filter(a => a.id !== adId);
+                saveAdsToStorage();
+                notify(`Ad ${adId} deleted.`);
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+            }
+        };
+
+        function saveAdsToStorage() {
+            try {
+                localStorage.setItem(STORAGE_KEY_ADS, JSON.stringify(currentAdsList));
+                localStorage.setItem('afm_ads_last_updated', Date.now().toString());
+            } catch (e) {
+                console.error('Error saving ads to storage', e);
+                notify('Warning: Storage error while saving ads', true);
+            }
+        }
+
+        // Export CSV
+        document.getElementById('btn-export-ads-csv')?.addEventListener('click', function() {
+            if (currentAdsList.length === 0) {
+                notify('No ads to export!', true);
+                return;
+            }
+            const headers = ['ID', 'SubmittedAt', 'Status', 'Name', 'Age', 'Gender', 'Phone', 'WhatsApp', 'City', 'Category', '1HrRate', 'NightRate', 'Title', 'Description'];
+            const rows = currentAdsList.map(a => [
+                a.id || '',
+                a.submittedAt || '',
+                a.status || 'Pending Review',
+                `"${(a.name || '').replace(/"/g, '""')}"`,
+                a.age || '',
+                a.gender || '',
+                a.phone || '',
+                a.whatsapp || '',
+                `"${(a.city || '').replace(/"/g, '""')}"`,
+                `"${(a.category || '').replace(/"/g, '""')}"`,
+                a.rates?.oneHour || '',
+                a.rates?.fullNight || '',
+                `"${(a.title || '').replace(/"/g, '""')}"`,
+                `"${(a.description || '').replace(/"/g, '""')}"`
+            ]);
+
+            const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `AngelsForMen_Submitted_Ads_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+            notify('Ads CSV exported successfully!');
+        });
+
+        // Export JSON
+        document.getElementById('btn-export-ads-json')?.addEventListener('click', function() {
+            if (currentAdsList.length === 0) {
+                notify('No ads to export!', true);
+                return;
+            }
+            const jsonStr = JSON.stringify(currentAdsList, null, 2);
+            const blob = new Blob([jsonStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `AngelsForMen_Submitted_Ads_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            notify('Ads JSON exported successfully!');
+        });
+
+        // Clear All Ads
+        document.getElementById('btn-clear-all-ads')?.addEventListener('click', function() {
+            if (currentAdsList.length === 0) return;
+            if (confirm('Warning: Are you sure you want to delete ALL submitted ads? This action cannot be undone.')) {
+                currentAdsList = [];
+                saveAdsToStorage();
+                notify('All submitted ads cleared!');
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+            }
+        });
+
+        // Add Demo Sample Ad for testing
+        document.getElementById('btn-add-sample-ad')?.addEventListener('click', function() {
+            const demoId = 'AFM-' + Math.floor(10000 + Math.random() * 90000);
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + 
+                            now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+            
+            const demoAd = {
+                id: demoId,
+                name: 'Simran Roy',
+                age: 22,
+                gender: 'Female',
+                phone: '9876543210',
+                whatsapp: '9876543210',
+                city: 'Dehradun',
+                category: 'VIP High-Class Escort',
+                availability: '24/7 Round the Clock',
+                meeting: 'Hotel & Resort Outcall',
+                rates: { oneHour: '4,000', twoHours: '7,000', fullNight: '14,000' },
+                title: 'Genuine 22yo Gorgeous VIP Model in Dehradun - In-Room Luxury Cash-on-Meeting',
+                description: 'Polite, educated, and discreet VIP companion offering sweet romance, candlelight dinner dates, and executive outcall to premier 5-star hotels.',
+                photo: '',
+                submittedAt: dateStr,
+                timestamp: Date.now(),
+                status: 'Pending Review',
+                notes: 'Demo test advertisement'
+            };
+
+            currentAdsList.unshift(demoAd);
+            saveAdsToStorage();
+            notify(`Demo ad ${demoId} added successfully!`);
+            updateAdsBadgeAndStats();
+            renderAdsTable();
+        });
+
+        // Refresh Button
+        document.getElementById('btn-refresh-ads')?.addEventListener('click', function() {
+            loadSubmittedAds();
+            notify('Submitted ads refreshed!');
+        });
+
+        // Search & Filter event listeners
+        document.getElementById('ad-search-input')?.addEventListener('input', renderAdsTable);
+        document.getElementById('ad-filter-status')?.addEventListener('change', renderAdsTable);
+        document.getElementById('ad-filter-city')?.addEventListener('change', renderAdsTable);
+
+        // Import Ad Modal Open
+        document.getElementById('btn-import-ad')?.addEventListener('click', function() {
+            const modal = document.getElementById('modal-import-ad');
+            if (modal) modal.style.display = 'flex';
+        });
+
+        // Import Ad Action
+        document.getElementById('btn-do-import-ad')?.addEventListener('click', function() {
+            const text = (document.getElementById('import-ad-textarea')?.value || '').trim();
+            if (!text) {
+                alert('Please paste ad text or JSON payload.');
+                return;
+            }
+
+            try {
+                // Try parsing as JSON first
+                if (text.startsWith('{') || text.startsWith('[')) {
+                    const parsed = JSON.parse(text);
+                    if (Array.isArray(parsed)) {
+                        currentAdsList = [...parsed, ...currentAdsList];
+                    } else if (parsed.id || parsed.name) {
+                        currentAdsList.unshift(parsed);
+                    }
+                } else {
+                    // Parse text message format
+                    const adId = (text.match(/Ad Reference ID:\s*([A-Z0-9-]+)/i) || [])[1] || ('AFM-' + Math.floor(10000 + Math.random() * 90000));
+                    const name = (text.match(/Name:\s*([^(
+]+)/i) || [])[1]?.trim() || 'WhatsApp Advertiser';
+                    const city = (text.match(/City:\s*([^
+]+)/i) || [])[1]?.trim() || 'Dehradun';
+                    const phone = (text.match(/Phone:\s*([^
+]+)/i) || [])[1]?.trim() || '9876543210';
+                    const category = (text.match(/Category:\s*([^
+]+)/i) || [])[1]?.trim() || 'VIP Escort';
+
+                    const newAd = {
+                        id: adId,
+                        name: name,
+                        age: 23,
+                        gender: 'Female',
+                        phone: phone,
+                        whatsapp: phone,
+                        city: city,
+                        category: category,
+                        availability: '24/7 Round the Clock',
+                        meeting: 'Hotel & Resort Outcall',
+                        rates: { oneHour: '3,500', twoHours: '6,000', fullNight: '12,000' },
+                        title: `${name} - Verified ${category} in ${city}`,
+                        description: text,
+                        photo: '',
+                        submittedAt: new Date().toLocaleDateString('en-IN') + ' ' + new Date().toLocaleTimeString('en-IN', {hour: '2-digit', minute:'2-digit'}),
+                        timestamp: Date.now(),
+                        status: 'Pending Review',
+                        notes: 'Imported via WhatsApp text'
+                    };
+                    currentAdsList.unshift(newAd);
+                }
+
+                saveAdsToStorage();
+                notify('Advertisement imported successfully!');
+                closeImportAdModal();
+                updateAdsBadgeAndStats();
+                renderAdsTable();
+                document.getElementById('import-ad-textarea').value = '';
+            } catch (err) {
+                alert('Could not parse advertisement: ' + err.message);
+            }
+        });
+
+        // Listen for storage events (updates from other tabs)
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY_ADS || e.key === 'afm_ads_last_updated') {
+                loadSubmittedAds();
+            }
+        });
+
         checkAuth();
     })();
     </script>
